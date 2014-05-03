@@ -36,7 +36,7 @@ module.exports = [
         ]
     }
 ];
-module.exports.metadata = 
+module.exports.metadata =
 // TOP OF METADATA
 {
     "org.apache.cordova.camera": "0.2.9",
