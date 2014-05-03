@@ -10,20 +10,15 @@
     <content src="index.html" />
     <access origin="*" />
 
-    <!-- DEVICEAPI:1/4 - INSTALL: $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git -->
-    <!-- DEVICEAPI:2/4 -->
     <plugin name="Device" value="org.apache.cordova.Device" />
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
 
-    <!-- GEOLOCATION -->
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
 
-    <!-- CAMERAAPI:1/6 - INSTALL : $ cordova plugin add org.apache.cordova.camera -->
-    <!-- CAMERAAPI:2/6 -->
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>

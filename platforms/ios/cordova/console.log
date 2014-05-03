@@ -2,3 +2,35 @@
 2014-05-02 14:01:54.794 ShakeTonBDE[3993:70b] Unlimited access to network resources
 2014-05-02 14:01:55.280 ShakeTonBDE[3993:70b] Resetting plugins due to page load.
 2014-05-02 14:01:55.567 ShakeTonBDE[3993:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/7C5ADC54-AAE2-40BD-96F1-5870E9E83C4B/ShakeTonBDE.app/www/index.html
+2014-05-03 16:47:32.759 ShakeTonBDE[2125:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-03 16:47:32.799 ShakeTonBDE[2125:70b] Unlimited access to network resources
+2014-05-03 16:47:33.157 ShakeTonBDE[2125:70b] Resetting plugins due to page load.
+2014-05-03 16:47:33.634 ShakeTonBDE[2125:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
+2014-05-03 16:47:44.819 ShakeTonBDE[2125:70b] THREAD WARNING: ['Geolocation'] took '398.720947' ms. Plugin should use a background thread.
+Terminating in response to SpringBoard's termination.
+2014-05-03 16:49:44.312 ShakeTonBDE[2363:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-03 16:49:44.324 ShakeTonBDE[2363:70b] Unlimited access to network resources
+2014-05-03 16:49:44.482 ShakeTonBDE[2363:70b] Resetting plugins due to page load.
+2014-05-03 16:49:44.865 ShakeTonBDE[2363:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2014-05-03 17:19:55.358 ShakeTonBDE[4218:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-03 17:19:55.370 ShakeTonBDE[4218:70b] Unlimited access to network resources
+2014-05-03 17:19:55.545 ShakeTonBDE[4218:70b] Resetting plugins due to page load.
+2014-05-03 17:19:55.916 ShakeTonBDE[4218:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
+2014-05-03 17:19:55.979 ShakeTonBDE[4218:70b] THREAD WARNING: ['Device'] took '10.219971' ms. Plugin should use a background thread.
+2014-05-03 17:19:59.046 ShakeTonBDE[4218:70b] THREAD WARNING: ['Geolocation'] took '1644.925049' ms. Plugin should use a background thread.
+Terminating in response to SpringBoard's termination.
+2014-05-03 17:25:32.902 ShakeTonBDE[4925:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-03 17:25:32.931 ShakeTonBDE[4925:70b] Unlimited access to network resources
+2014-05-03 17:25:33.129 ShakeTonBDE[4925:70b] Resetting plugins due to page load.
+2014-05-03 17:25:33.635 ShakeTonBDE[4925:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2014-05-03 17:31:49.917 ShakeTonBDE[6015:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-03 17:31:49.932 ShakeTonBDE[6015:70b] Unlimited access to network resources
+2014-05-03 17:31:50.153 ShakeTonBDE[6015:70b] Resetting plugins due to page load.
+2014-05-03 17:31:50.660 ShakeTonBDE[6015:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
+2014-05-03 17:33:47.630 ShakeTonBDE[6397:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-03 17:33:47.642 ShakeTonBDE[6397:70b] Unlimited access to network resources
+2014-05-03 17:33:47.940 ShakeTonBDE[6397:70b] Resetting plugins due to page load.
+2014-05-03 17:33:48.337 ShakeTonBDE[6397:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
+2014-05-03 17:34:10.126 ShakeTonBDE[6397:70b] THREAD WARNING: ['Geolocation'] took '1442.333984' ms. Plugin should use a background thread.
