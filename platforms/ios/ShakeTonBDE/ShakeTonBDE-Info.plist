@@ -49,21 +49,21 @@
       </dict>
     </dict>
     <key>CFBundleIdentifier</key>
-    <string>com.shaketonbde</string>
+    <string>com.iesamultimedia.shaketonbde</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
     <string>${PRODUCT_NAME}</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
-    <key>NSMainNibFile</key>
-    <string></string>
     <key>NSMainNibFile~ipad</key>
     <string></string>
     <key>UISupportedInterfaceOrientations</key>
@@ -74,10 +74,7 @@
     <array>
       <string>UIInterfaceOrientationPortrait</string>
       <string>UIInterfaceOrientationLandscapeLeft</string>
-      <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
-    <key>CFBundleShortVersionString</key>
-    <string>1.0.0</string>
   </dict>
 </plist>

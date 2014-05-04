@@ -1,28 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.shaketonbde" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.iesamultimedia.shaketonbde" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>ShakeTonBDE</name>
     <description>
-        L'appli de ton BDE qui shake son booty
+        L'appli pour ne plus rater les soirées de ton BDE
     </description>
-    <author email="dev@shaketonbde.com" href="http://shaketonbde.com">
-        New York Cyborgs
+    <author email="shake@tonbde.com" href="http://shaketonbde.com/">
+      New York Cyborgs
     </author>
     <content src="index.html" />
     <access origin="*" />
-
-    <plugin name="Device" value="org.apache.cordova.Device" />
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <feature name="StatusBar">
+      <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
-
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
-    </feature>
-
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    <feature name="Contacts">
+        <param name="ios-package" value="CDVContacts" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
     </feature>
 </widget>
