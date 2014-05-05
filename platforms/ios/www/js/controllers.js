@@ -114,16 +114,14 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
     alert('Failed because: ' + message);
   }
 
-  $scope.takePicture = function(e) {
-    e.preventDefault();
-    alert('OK je passe');
+  $scope.takePicture = function() {
     navigator.camera.getPicture(
       onSuccess,
       onFail,
       {
         quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI,
-        sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
+        destinationType: Camera.DestinationType.FILE_URI
+        // sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
       }
     );
   };
