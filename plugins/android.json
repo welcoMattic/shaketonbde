@@ -56,9 +56,6 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.ionicframework.starter"
-        },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.ionicframework.starter"
         },

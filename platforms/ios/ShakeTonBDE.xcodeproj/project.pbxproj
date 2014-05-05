@@ -42,7 +42,6 @@
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		92E8B85FA61B42A49FCB7EF7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C431D2549E14E34AF4EE7D1 /* AddressBookUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		94E639942D094494BFF03044 /* CDVJpegHeaderWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EE2CBA996A44C79DA7094E /* CDVJpegHeaderWriter.m */; };
-		A1B89DBDE900401FB6A39898 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE414F930A5433C978475B5 /* CDVLogger.m */; };
 		C452432D90914BCD9E19FD9F /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA67EF852584C3A9DC3D5F2 /* CDVDevice.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DD8CBF0FF15E403A807B1EB4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF3BFDB3FEF4E4987EB3781 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -470,7 +469,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				A1B89DBDE900401FB6A39898 /* CDVLogger.m in Sources */,
 				C452432D90914BCD9E19FD9F /* CDVDevice.m in Sources */,
 				6BC0C9709D914282852C9AEF /* CDVCamera.m in Sources */,
 				94E639942D094494BFF03044 /* CDVJpegHeaderWriter.m in Sources */,
