@@ -14,7 +14,7 @@ angular.module('Shaketonbde.controllers', [])
   function initialize(callback) {
     var mapOptions = {
           center: new google.maps.LatLng(48.8588589,2.3470599),
-          zoom: 15,
+          zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
         }
       , map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -31,7 +31,7 @@ angular.module('Shaketonbde.controllers', [])
   };
 
   function makeInfoWindowEvent(map, infowindow, marker) {
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'ng-click', function() {
       infowindow.open(map, marker);
     });
   }
@@ -82,4 +82,18 @@ angular.module('Shaketonbde.controllers', [])
     event.date = new Date(event.date);
     $scope.event = event;
   });
+})
+
+.controller('CameraCtrl', function($scope) {
+  $scope.takePicture = function() {
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
+  };
+
+  function onSuccess(imageURI) {
+    $scope.imgsrc = imageURI;
+  }
+
+  function onFail(message) {
+    alert('Failed because: ' + message);
+  }
 });

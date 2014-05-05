@@ -23,7 +23,8 @@ angular.module('Shaketonbde', ['ionic', 'Shaketonbde.controllers', 'ngResource']
       url: '/camera',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/camera.html'
+          templateUrl: 'templates/camera.html',
+          controller: 'CameraCtrl'
         }
       }
     })

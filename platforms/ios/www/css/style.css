@@ -8,6 +8,11 @@
   height: 100%;
 }
 
+h1.title.ng-binding {
+  left:0 !important;
+  right: 0 !important;
+}
+
 @font-face {
   font-family: 'icomoon';
   src:url('http://s3.amazonaws.com/icomoonfonts/4/6/f.eot');

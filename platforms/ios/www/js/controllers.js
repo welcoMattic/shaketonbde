@@ -1,20 +1,23 @@
 'use strict';
-angular.module('Shaketonbde.controllers', [])
 
-.factory('Event', ['$resource',
-  function($resource){
-    return $resource('events.json', {}, {'query': {method: 'GET', isArray: false}});
-  }]
-)
+/*=====================================
+=            Menu Controller          =
+=====================================*/
 
-.controller('AppCtrl', function($scope) {
-})
+Shaketonbde.controller('AppCtrl', function($scope) {
+});
 
-.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
+
+
+/*========================================
+=            Events Controller           =
+========================================*/
+
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
   function initialize(callback) {
     var mapOptions = {
           center: new google.maps.LatLng(48.8588589,2.3470599),
-          zoom: 15,
+          zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
         }
       , map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -31,7 +34,7 @@ angular.module('Shaketonbde.controllers', [])
   };
 
   function makeInfoWindowEvent(map, infowindow, marker) {
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'ng-click', function() {
       infowindow.open(map, marker);
     });
   }
@@ -64,7 +67,10 @@ angular.module('Shaketonbde.controllers', [])
 
       $scope.map.setCenter(myPos);
       var marker = new google.maps.Marker({ position: myPos, map: $scope.map });
-      // TODO : replace by perso icon
+      /**
+        TODO:
+        - replace by perso icon
+      **/
       var infowindow = new google.maps.InfoWindow({ content: "You" });
       makeInfoWindowEvent($scope.map, infowindow, marker);
       $ionicLoading.hide();
@@ -74,12 +80,72 @@ angular.module('Shaketonbde.controllers', [])
   };
 
   google.maps.event.addDomListener(window, 'load', initialize(centreOnMe));
-})
+});
 
-.controller('EventCtrl', function($scope, $stateParams, Event) {
+
+
+/*===============================================
+=            Single Event Controller            =
+===============================================*/
+
+Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
   Event.query().$promise.then(function(events) {
     var event = events[$stateParams.eventId];
     event.date = new Date(event.date);
     $scope.event = event;
   });
+});
+
+
+
+/*=========================================
+=            Camera Controller            =
+=========================================*/
+
+Shaketonbde.controller('CameraCtrl', function($scope) {
+  function onSuccess(imageURI) {
+    console.log(imageURI);
+    $scope.$apply(function() {
+      $scope.imageURI = imageURI;
+    });
+  }
+
+  function onFail(message) {
+    alert('Failed because: ' + message);
+  }
+
+  $scope.takePicture = function(e) {
+    e.preventDefault();
+    alert('OK je passe');
+    navigator.camera.getPicture(
+      onSuccess,
+      onFail,
+      {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
+      }
+    );
+  };
+});
+
+
+
+/*=========================================
+=            Invite Controller            =
+=========================================*/
+
+Shaketonbde.controller('InviteCtrl', function($scope) {
+  $scope.contacts = [];
+  $scope.chooseContact = function () {
+    var options = new ContactFindOptions();
+    options.fields = ["displayName", "name", "emails", "phoneNumbers"];
+    navigator.contacts.chooseContact(onSuccess, options);
+  };
+
+  function onSuccess(id, contact) {
+    $scope.$apply(function(contact) {
+      $scope.contacts.push(JSON.stringify(contact));
+    });
+  };
 });

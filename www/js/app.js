@@ -1,15 +1,20 @@
 'use strict';
-angular.module('Shaketonbde', ['ionic', 'Shaketonbde.controllers', 'ngResource'])
+var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource']);
 
-.run(function($ionicPlatform) {
+Shaketonbde.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
   });
-})
+});
 
-.config(function($stateProvider, $urlRouterProvider) {
+
+/*==============================
+=            Router            =
+==============================*/
+
+Shaketonbde.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
     .state('app', {
@@ -23,7 +28,8 @@ angular.module('Shaketonbde', ['ionic', 'Shaketonbde.controllers', 'ngResource']
       url: '/camera',
       views: {
         'menuContent' :{
-          templateUrl: 'templates/camera.html'
+          templateUrl: 'templates/camera.html',
+          controller: 'CameraCtrl'
         }
       }
     })
@@ -44,6 +50,16 @@ angular.module('Shaketonbde', ['ionic', 'Shaketonbde.controllers', 'ngResource']
         'menuContent' :{
           templateUrl: 'templates/event.html',
           controller: 'EventCtrl'
+        }
+      }
+    })
+
+    .state('app.invite', {
+      url: '/invite',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/invite.html',
+          controller: 'InviteCtrl'
         }
       }
     });
