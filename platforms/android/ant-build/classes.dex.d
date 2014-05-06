@@ -1,0 +1,20 @@
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes.dex : \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/BuildConfig.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R$attr.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R$drawable.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R$string.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R$xml.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/ShakeTonBDE.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactAccessor$WhereOptions.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactAccessor.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactAccessorSdk5.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$1.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$2.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$3.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/workspace/IESA/shaketonbde/platforms/android/ant-build/dexedLibs/classes-06faef3349958e47a1546e4df0877748.jar \

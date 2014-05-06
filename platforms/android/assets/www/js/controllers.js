@@ -45,13 +45,13 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     $scope.loading = $ionicLoading.show({
       content: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>',
-      showBackdrop: true
+      showBackdrop: false
     });
 
     navigator.geolocation.getCurrentPosition(function(pos) {
       var position = pos.coords.latitude +','+pos.coords.longitude
         , myPos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude)
-        ,Events = new Event.query();
+        , Events = new Event.query();
 
       Events.$promise.then(function(events) {
         $scope.events = events;
@@ -76,7 +76,8 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
       $ionicLoading.hide();
     }, function(error) {
       alert('Impossible de te trouver: ' + error.message);
-    });
+    },
+    { enableHighAccuracy: true });
   };
 
   google.maps.event.addDomListener(window, 'load', initialize(centreOnMe));
@@ -115,14 +116,13 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
   }
 
   $scope.takePicture = function() {
-    alert('OK je passe');
     navigator.camera.getPicture(
       onSuccess,
       onFail,
       {
         quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI,
-        sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
+        destinationType: Camera.DestinationType.FILE_URI
+        // sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
       }
     );
   };

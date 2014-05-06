@@ -38,13 +38,13 @@
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
     <feature name="Contacts">
         <param name="ios-package" value="CDVContacts" />
     </feature>
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
-    </feature>
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
     </feature>
 </widget>
