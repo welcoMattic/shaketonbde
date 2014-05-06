@@ -1,36 +1,97 @@
-2014-05-02 14:01:54.742 ShakeTonBDE[3993:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-02 14:01:54.794 ShakeTonBDE[3993:70b] Unlimited access to network resources
-2014-05-02 14:01:55.280 ShakeTonBDE[3993:70b] Resetting plugins due to page load.
-2014-05-02 14:01:55.567 ShakeTonBDE[3993:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/7C5ADC54-AAE2-40BD-96F1-5870E9E83C4B/ShakeTonBDE.app/www/index.html
-2014-05-03 16:47:32.759 ShakeTonBDE[2125:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-03 16:47:32.799 ShakeTonBDE[2125:70b] Unlimited access to network resources
-2014-05-03 16:47:33.157 ShakeTonBDE[2125:70b] Resetting plugins due to page load.
-2014-05-03 16:47:33.634 ShakeTonBDE[2125:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
-2014-05-03 16:47:44.819 ShakeTonBDE[2125:70b] THREAD WARNING: ['Geolocation'] took '398.720947' ms. Plugin should use a background thread.
+2014-05-04 17:06:00.927 ShakeTonBDE[29000:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-04 17:06:00.978 ShakeTonBDE[29000:70b] Unlimited access to network resources
+2014-05-04 17:06:01.181 ShakeTonBDE[29000:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-04 17:06:01.182 ShakeTonBDE[29000:70b] [CDVTimer][statusbar] 0.621021ms
+2014-05-04 17:06:01.182 ShakeTonBDE[29000:70b] [CDVTimer][TotalPluginStartup] 1.182020ms
+2014-05-04 17:06:01.407 ShakeTonBDE[29000:70b] Resetting plugins due to page load.
+2014-05-04 17:06:02.011 ShakeTonBDE[29000:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/968EBD6F-8F9B-4B6E-9B2B-7E1E23DC73B8/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-04 17:06:02.657 ShakeTonBDE[29000:70b] adding proxy for Contacts
+2014-05-04 17:09:24.500 ShakeTonBDE[29704:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-04 17:09:24.516 ShakeTonBDE[29704:70b] Unlimited access to network resources
+2014-05-04 17:09:24.542 ShakeTonBDE[29704:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-04 17:09:24.543 ShakeTonBDE[29704:70b] [CDVTimer][statusbar] 0.675976ms
+2014-05-04 17:09:24.543 ShakeTonBDE[29704:70b] [CDVTimer][TotalPluginStartup] 1.224995ms
+2014-05-04 17:09:24.692 ShakeTonBDE[29704:70b] Resetting plugins due to page load.
+2014-05-04 17:09:25.343 ShakeTonBDE[29704:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/968EBD6F-8F9B-4B6E-9B2B-7E1E23DC73B8/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-04 17:09:26.577 ShakeTonBDE[29704:70b] adding proxy for Contacts
 Terminating in response to SpringBoard's termination.
-2014-05-03 16:49:44.312 ShakeTonBDE[2363:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-03 16:49:44.324 ShakeTonBDE[2363:70b] Unlimited access to network resources
-2014-05-03 16:49:44.482 ShakeTonBDE[2363:70b] Resetting plugins due to page load.
-2014-05-03 16:49:44.865 ShakeTonBDE[2363:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
+2014-05-04 18:31:54.371 ShakeTonBDE[4463:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-04 18:31:54.440 ShakeTonBDE[4463:70b] Unlimited access to network resources
+2014-05-04 18:31:54.711 ShakeTonBDE[4463:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-04 18:31:54.712 ShakeTonBDE[4463:70b] [CDVTimer][statusbar] 0.975013ms
+2014-05-04 18:31:54.713 ShakeTonBDE[4463:70b] [CDVTimer][TotalPluginStartup] 1.568019ms
+2014-05-04 18:31:54.937 ShakeTonBDE[4463:70b] Resetting plugins due to page load.
+2014-05-04 18:31:55.936 ShakeTonBDE[4463:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/968EBD6F-8F9B-4B6E-9B2B-7E1E23DC73B8/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-04 18:31:56.137 ShakeTonBDE[4463:70b] adding proxy for Contacts
 Terminating in response to SpringBoard's termination.
-2014-05-03 17:19:55.358 ShakeTonBDE[4218:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-03 17:19:55.370 ShakeTonBDE[4218:70b] Unlimited access to network resources
-2014-05-03 17:19:55.545 ShakeTonBDE[4218:70b] Resetting plugins due to page load.
-2014-05-03 17:19:55.916 ShakeTonBDE[4218:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
-2014-05-03 17:19:55.979 ShakeTonBDE[4218:70b] THREAD WARNING: ['Device'] took '10.219971' ms. Plugin should use a background thread.
-2014-05-03 17:19:59.046 ShakeTonBDE[4218:70b] THREAD WARNING: ['Geolocation'] took '1644.925049' ms. Plugin should use a background thread.
+2014-05-04 18:34:02.564 ShakeTonBDE[4858:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-04 18:34:02.593 ShakeTonBDE[4858:70b] Unlimited access to network resources
+2014-05-04 18:34:02.618 ShakeTonBDE[4858:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-04 18:34:02.619 ShakeTonBDE[4858:70b] [CDVTimer][statusbar] 0.640988ms
+2014-05-04 18:34:02.619 ShakeTonBDE[4858:70b] [CDVTimer][TotalPluginStartup] 1.329005ms
+2014-05-04 18:34:02.798 ShakeTonBDE[4858:70b] Resetting plugins due to page load.
+2014-05-04 18:34:03.264 ShakeTonBDE[4858:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/968EBD6F-8F9B-4B6E-9B2B-7E1E23DC73B8/ShakeTonBDE.app/www/index.html
+2014-05-04 18:34:03.401 ShakeTonBDE[4858:70b] adding proxy for Contacts
+2014-05-04 19:10:58.749 ShakeTonBDE[7498:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-04 19:10:58.761 ShakeTonBDE[7498:70b] Unlimited access to network resources
+2014-05-04 19:10:58.785 ShakeTonBDE[7498:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-04 19:10:58.786 ShakeTonBDE[7498:70b] [CDVTimer][statusbar] 0.643969ms
+2014-05-04 19:10:58.787 ShakeTonBDE[7498:70b] [CDVTimer][TotalPluginStartup] 1.232982ms
+2014-05-04 19:10:58.920 ShakeTonBDE[7498:70b] Resetting plugins due to page load.
+2014-05-04 19:11:00.537 ShakeTonBDE[7498:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/968EBD6F-8F9B-4B6E-9B2B-7E1E23DC73B8/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-04 19:11:01.099 ShakeTonBDE[7498:70b] adding proxy for Contacts
+2014-05-04 19:11:05.314 ShakeTonBDE[7498:70b] Camera.getPicture: source type 1 not available.
+2014-05-05 22:24:14.191 ShakeTonBDE[3856:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-05 22:24:14.225 ShakeTonBDE[3856:70b] Unlimited access to network resources
+2014-05-05 22:24:14.393 ShakeTonBDE[3856:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-05 22:24:14.393 ShakeTonBDE[3856:70b] [CDVTimer][statusbar] 0.630975ms
+2014-05-05 22:24:14.394 ShakeTonBDE[3856:70b] [CDVTimer][TotalPluginStartup] 1.132011ms
+2014-05-05 22:24:14.578 ShakeTonBDE[3856:70b] Resetting plugins due to page load.
+2014-05-05 22:24:20.838 ShakeTonBDE[3856:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/968EBD6F-8F9B-4B6E-9B2B-7E1E23DC73B8/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-05 22:24:21.626 ShakeTonBDE[3856:70b] adding proxy for Contacts
+2014-05-05 22:25:30.465 ShakeTonBDE[4207:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-05 22:25:30.478 ShakeTonBDE[4207:70b] Unlimited access to network resources
+2014-05-05 22:25:30.652 ShakeTonBDE[4207:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-05 22:25:30.653 ShakeTonBDE[4207:70b] [CDVTimer][statusbar] 0.667989ms
+2014-05-05 22:25:30.653 ShakeTonBDE[4207:70b] [CDVTimer][TotalPluginStartup] 1.264989ms
+2014-05-05 22:25:30.822 ShakeTonBDE[4207:70b] Resetting plugins due to page load.
+2014-05-05 22:25:31.437 ShakeTonBDE[4207:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/968EBD6F-8F9B-4B6E-9B2B-7E1E23DC73B8/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-05 22:25:32.466 ShakeTonBDE[4207:70b] adding proxy for Contacts
+AB: Could not compile statement for query (ABCCopyArrayOfAllInstancesOfClassInSourceMatchingProperties):
+SELECT ROWID, Name, ExternalIdentifier, Type, ConstraintsPath, ExternalModificationTag, ExternalSyncTag, AccountID, Enabled, SyncData, MeIdentifier, Capabilities FROM ABStore WHERE Enabled = ?;
+2014-05-05 22:25:37.812 ShakeTonBDE[4207:70b] THREAD WARNING: ['Contacts'] took '69.005859' ms. Plugin should use a background thread.
+AB: Could not compile statement for query (ABCCopyArrayOfAllInstancesOfClassInSourceMatchingProperties):
+SELECT ROWID, Name, ExternalIdentifier, Type, ConstraintsPath, ExternalModificationTag, ExternalSyncTag, AccountID, Enabled, SyncData, MeIdentifier, Capabilities FROM ABStore WHERE Enabled = ?;
 Terminating in response to SpringBoard's termination.
-2014-05-03 17:25:32.902 ShakeTonBDE[4925:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-03 17:25:32.931 ShakeTonBDE[4925:70b] Unlimited access to network resources
-2014-05-03 17:25:33.129 ShakeTonBDE[4925:70b] Resetting plugins due to page load.
-2014-05-03 17:25:33.635 ShakeTonBDE[4925:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
-Terminating in response to SpringBoard's termination.
-2014-05-03 17:31:49.917 ShakeTonBDE[6015:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-03 17:31:49.932 ShakeTonBDE[6015:70b] Unlimited access to network resources
-2014-05-03 17:31:50.153 ShakeTonBDE[6015:70b] Resetting plugins due to page load.
-2014-05-03 17:31:50.660 ShakeTonBDE[6015:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
-2014-05-03 17:33:47.630 ShakeTonBDE[6397:70b] Multi-tasking -> Device: YES, App: YES
-2014-05-03 17:33:47.642 ShakeTonBDE[6397:70b] Unlimited access to network resources
-2014-05-03 17:33:47.940 ShakeTonBDE[6397:70b] Resetting plugins due to page load.
-2014-05-03 17:33:48.337 ShakeTonBDE[6397:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/CC87838D-6273-452C-8C25-199BCB691551/ShakeTonBDE.app/www/index.html
-2014-05-03 17:34:10.126 ShakeTonBDE[6397:70b] THREAD WARNING: ['Geolocation'] took '1442.333984' ms. Plugin should use a background thread.
+2014-05-05 22:28:02.039 ShakeTonBDE[4513:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-05 22:28:02.052 ShakeTonBDE[4513:70b] Unlimited access to network resources
+2014-05-05 22:28:02.081 ShakeTonBDE[4513:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-05 22:28:02.082 ShakeTonBDE[4513:70b] [CDVTimer][statusbar] 1.109004ms
+2014-05-05 22:28:02.083 ShakeTonBDE[4513:70b] [CDVTimer][TotalPluginStartup] 1.814008ms
+2014-05-05 22:28:02.249 ShakeTonBDE[4513:70b] Resetting plugins due to page load.
+2014-05-05 22:28:28.451 ShakeTonBDE[4774:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-05 22:28:28.511 ShakeTonBDE[4774:70b] Unlimited access to network resources
+2014-05-05 22:28:28.539 ShakeTonBDE[4774:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-05 22:28:28.539 ShakeTonBDE[4774:70b] [CDVTimer][statusbar] 0.698984ms
+2014-05-05 22:28:28.540 ShakeTonBDE[4774:70b] [CDVTimer][TotalPluginStartup] 1.435995ms
+2014-05-05 22:28:28.721 ShakeTonBDE[4774:70b] Resetting plugins due to page load.
+2014-05-05 22:28:32.134 ShakeTonBDE[4774:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BBB45516-7B7D-46F5-9BF7-0E534EF7A7A5/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-05 22:28:33.149 ShakeTonBDE[4774:70b] adding proxy for Contacts
+2014-05-05 22:28:42.100 ShakeTonBDE[4774:70b] THREAD WARNING: ['Contacts'] took '25.319092' ms. Plugin should use a background thread.
+2014-05-05 22:29:20.585 ShakeTonBDE[5058:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-05 22:29:20.598 ShakeTonBDE[5058:70b] Unlimited access to network resources
+2014-05-05 22:29:20.624 ShakeTonBDE[5058:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-05 22:29:20.624 ShakeTonBDE[5058:70b] [CDVTimer][statusbar] 0.621974ms
+2014-05-05 22:29:20.625 ShakeTonBDE[5058:70b] [CDVTimer][TotalPluginStartup] 1.112998ms
+2014-05-05 22:29:20.768 ShakeTonBDE[5058:70b] Resetting plugins due to page load.
+2014-05-05 22:29:21.498 ShakeTonBDE[5058:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BBB45516-7B7D-46F5-9BF7-0E534EF7A7A5/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-05 22:29:22.507 ShakeTonBDE[5058:70b] adding proxy for Contacts
+2014-05-05 22:30:22.235 ShakeTonBDE[5058:70b] THREAD WARNING: ['Contacts'] took '21.758057' ms. Plugin should use a background thread.
+2014-05-05 22:31:06.310 ShakeTonBDE[5333:70b] Multi-tasking -> Device: YES, App: YES
+2014-05-05 22:31:06.322 ShakeTonBDE[5333:70b] Unlimited access to network resources
+2014-05-05 22:31:06.350 ShakeTonBDE[5333:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-05-05 22:31:06.351 ShakeTonBDE[5333:70b] [CDVTimer][statusbar] 0.647008ms
+2014-05-05 22:31:06.352 ShakeTonBDE[5333:70b] [CDVTimer][TotalPluginStartup] 1.230955ms
+2014-05-05 22:31:06.504 ShakeTonBDE[5333:70b] Resetting plugins due to page load.
+2014-05-05 22:31:07.579 ShakeTonBDE[5333:70b] Finished load of: file:///Users/welcomattic/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/BBB45516-7B7D-46F5-9BF7-0E534EF7A7A5/ShakeTonBDE.app/www/index.html#/app/events
+2014-05-05 22:31:08.607 ShakeTonBDE[5333:70b] adding proxy for Contacts

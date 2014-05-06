@@ -1,0 +1,622 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"$st",
+				"$stateParams"
+			],
+			[
+				"Eve",
+				"EventResource"
+			],
+			[
+				"$re",
+				"$resource	AngularJS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "templates/camera.html",
+			"settings":
+			{
+				"buffer_size": 359,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/controllers.js",
+			"settings":
+			{
+				"buffer_size": 3095,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 368.0,
+		"selected_items":
+		[
+			[
+				"aut",
+				"Autoprefix CSS"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/workspace/IESA/shaketonbde/www/shaketonbde.sublime-project",
+		"/workspace/IESA/shaketonbde/www/js/controllers.js",
+		"/workspace/IESA/shaketonbde/www/templates/event.html",
+		"/workspace/IESA/shaketonbde/www/templates/events.html",
+		"/workspace/IESA/shaketonbde/www/templates/menu.html",
+		"/workspace/IESA/shaketonbde/www/index.html",
+		"/workspace/IESA/shaketonbde/www/js/app.js",
+		"/Users/welcomattic/Downloads/hello/www/index.html",
+		"/workspace/IESA/shaketonbde/plugins/org.apache.cordova.camera/www/Camera.js",
+		"/Users/welcomattic/Downloads/hello/www/js/index.js",
+		"/workspace/IESA/shaketonbde/www/templates/camera.html",
+		"/workspace/IESA/shaketonbde/config.xml",
+		"/workspace/IESA/shaketonbde/www/css/style.css",
+		"/workspace/IESA/shaketonbde/platforms/ios/ShakeTonBDE.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+		"/workspace/IESA/shaketonbde/platforms/ios/ShakeTonBDE.xcodeproj/xcuserdata/welcomattic.xcuserdatad/xcschemes/xcschememanagement.plist",
+		"/workspace/IESA/shaketonbde/www/events.json",
+		"/workspace/lunchApp/www/js/controllers.js",
+		"/workspace/app/scripts/controllers.js",
+		"/workspace/IESA/shaketonbde/platforms/android/res/xml/config.xml",
+		"/workspace/IESA/shaketonbde/platforms/android/AndroidManifest.xml",
+		"/workspace/IESA/shaketonbde/www/README.md",
+		"/workspace/IESA/shaketonbde/README.md",
+		"/workspace/IESA/shaketonbde/events.json",
+		"/workspace/IESA/shaketonbde/gulpfile.js",
+		"/workspace/IESA/shaketonbde/ionic.project",
+		"/workspace/IESA/shaketonbde/package.json",
+		"/workspace/app/templates/menu.html",
+		"/workspace/app/templates/events.html",
+		"/workspace/app/templates/event.html",
+		"/workspace/app/templates/camera.html",
+		"/workspace/app/index.html",
+		"/workspace/app/scripts/app.js",
+		"/workspace/app/styles/main.css",
+		"/workspace/IESA/shaketonbde/app/index.html",
+		"/workspace/IESA/shaketonbde/app/templates/events.html",
+		"/workspace/IESA/shaketonbde/app/scripts/controllers.js",
+		"/workspace/IESA/shaketonbde/app/styles/main.css",
+		"/workspace/IESA/shaketonbde/app/scripts/app.js",
+		"/workspace/IESA/draft-phonegap/hello/www/js/index.js",
+		"/workspace/lunchApp/www/index.html",
+		"/workspace/IESA/shaketonbde/app/templates/event.html",
+		"/workspace/IESA/shaketonbde/app/events.json",
+		"/workspace/IESA/shaketonbde/Gruntfile.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/demos/google-maps/index.html",
+		"/workspace/IESA/shaketonbde/app/templates/camera.html",
+		"/workspace/IESA/shaketonbde/app/templates/menu.html",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/gulpfile.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/js/ionic.bundle.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/demos/starter-template/index.html",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/demos/starter-template/script.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/js/ionic.bundle.min.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/js/ionic-angular.min.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/js/ionic.min.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/js/ionic-angular.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/css/ionic.min.css",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/scss/ionicons/ionicons.scss",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/fonts/ionicons.woff",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/fonts/ionicons.svg",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/js/ionic.js",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/release/css/ionic.css",
+		"/workspace/IESA/shaketonbde/app/bower_components/ionic/scss/ionic.scss",
+		"/workspace/IESA/shaketonbde/app/fonts/ionicons.woff",
+		"/workspace/IESA/shaketonbde/app/fonts/ionicons.svg",
+		"/workspace/IESA/shaketonbde/node_modules/grunt-contrib-cssmin/test/fixtures/input_one.css",
+		"/workspace/IESA/shaketonbde/.jshintrc",
+		"/workspace/IESA/shaketonbde/.gitignore",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/config.xml",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/Info.plist",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/list-started-emulators.bat",
+		"/workspace/IESA/shaketonbde/platforms/ios/cordova/lib/list-started-emulators",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/list-started-emulators",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/list-emulator-images.bat",
+		"/workspace/IESA/shaketonbde/platforms/ios/cordova/lib/list-emulator-images",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/start-emulator.bat",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/list-emulator-images",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/install-emulator.bat",
+		"/workspace/IESA/shaketonbde/platforms/ios/cordova/lib/start-emulator",
+		"/workspace/IESA/shaketonbde/platforms/ios/cordova/lib/install-emulator",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/start-emulator",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/install-emulator",
+		"/workspace/IESA/shaketonbde/platforms/android/cordova/lib/emulator.js",
+		"/workspace/IESA/shaketonbde/platforms/ios/cordova/emulate",
+		"/workspace/IESA/shaketonbde/www/js/main.js",
+		"/workspace/IESA/shaketonbde/platforms/android/CordovaLib/.project",
+		"/workspace/IESA/shaketonbde/platforms/android/CordovaLib/local.properties",
+		"/workspace/IESA/shaketonbde/platforms/android/assets/www/cordova_plugins.js",
+		"/workspace/IESA/shaketonbde/platforms/android/assets/www/css/index.css",
+		"/workspace/IESA/shaketonbde/platforms/android/assets/www/index.html",
+		"/workspace/IESA/shaketonbde/platforms/android/local.properties",
+		"/workspace/IESA/shaketonbde/platforms/ios/ShakeTonBDE.xcodeproj/project.pbxproj",
+		"/workspace/IESA/shaketonbde/plugins/android.json",
+		"/workspace/IESA/shaketonbde/plugins/org.apache.cordova.camera/.fetch.json",
+		"/workspace/IESA/shaketonbde/plugins/org.apache.cordova.device/.fetch.json",
+		"/workspace/IESA/shaketonbde/platforms/android/res/values/strings.xml",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/CordovaLib~.dep",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/CordovaLib.dep",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/build-state~.dat",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/build-state.dat",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.dia",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.d",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/Script-304B58A110DAC018002A0835.sh",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/build-state~.dat",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/build-state.dat",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/Objects-normal/i386/ShakeTonBDE_dependency_info.dat",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/Objects-normal/i386/ShakeTonBDE.LinkFileList",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/ShakeTonBDE-own-target-headers.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/ShakeTonBDE-project-headers.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/ShakeTonBDE-generated-files.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/ShakeTonBDE~.dep",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/ShakeTonBDE.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/ShakeTonBDE.dep",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/ShakeTonBDE.build/Debug-iphonesimulator/ShakeTonBDE.build/ShakeTonBDE-all-target-headers.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/www/plugins/org.apache.cordova.geolocation/www/PositionError.js",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/www/plugins/org.apache.cordova.geolocation/www/Position.js",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/www/plugins/org.apache.cordova.geolocation/www/geolocation.js",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/www/plugins/org.apache.cordova.geolocation/www/Coordinates.js",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/www/js/zepto.min.js",
+		"/workspace/IESA/shaketonbde/platforms/ios/build/emulator/ShakeTonBDE.app/www/js/main.js"
+	],
+	"find":
+	{
+		"height": 54.0
+	},
+	"find_in_files":
+	{
+		"height": 154.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"env",
+			"$q",
+			"button",
+			"tton",
+			"/a",
+			"a href=\"#\"",
+			"Label",
+			"isChecked",
+			"saveToPhotoAlbum",
+			"takePicture",
+			"choosePictureAlbum",
+			":",
+			": {",
+			"h1.title.ng-binding",
+			"bar",
+			"event",
+			"console",
+			">\n",
+			"ShakeTonBDE",
+			"css styles/vendor.css -->\n    <!-- <link rel=\"stylesheet\" href=\"vendor/some.contrib.css\"> -->\n    <!-- bower:css",
+			"\n",
+			"style",
+			"initialize",
+			"100",
+			"app",
+			"user",
+			"sanitize",
+			"watch",
+			"playlist",
+			"playlists",
+			"sudo",
+			"#",
+			"bootstrap",
+			"fail",
+			"success",
+			"user",
+			"info",
+			"installdeps",
+			"DEFAULT_USER",
+			"_3",
+			"fichier",
+			"3",
+			"_3",
+			"fichier_2_name",
+			"fichier_name_2",
+			"juicy",
+			"Spacegray_theme",
+			"\"_",
+			"_"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Spacegray.sublime-theme\",\n  \"color_sch",
+			" \""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "templates/camera.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								330,
+								330
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/controllers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								772,
+								772
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "shaketonbde.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"ionic",
+				"app/bower_components/ionic/release/js/ionic.bundle.min.js"
+			],
+			[
+				"emu",
+				"platforms/ios/cordova/lib/start-emulator"
+			],
+			[
+				"emul",
+				"platforms/ios/cordova/lib/install-emulator"
+			],
+			[
+				"config.xml",
+				"config.xml"
+			],
+			[
+				"platforms/android/androidmanifest.xml",
+				"platforms/android/AndroidManifest.xml"
+			],
+			[
+				"platforms/android/cordovalib/.project",
+				"platforms/android/CordovaLib/.project"
+			],
+			[
+				"platforms/android/cordovalib/local.properties",
+				"platforms/android/CordovaLib/local.properties"
+			],
+			[
+				"platforms/android/assets/www/cordova_plugins.js",
+				"platforms/android/assets/www/cordova_plugins.js"
+			],
+			[
+				"platforms/android/assets/www/css/index.css",
+				"platforms/android/assets/www/css/index.css"
+			],
+			[
+				"platforms/android/assets/www/index.html",
+				"platforms/android/assets/www/index.html"
+			],
+			[
+				"platforms/android/local.properties",
+				"platforms/android/local.properties"
+			],
+			[
+				"platforms/ios/shaketonbde.xcodeproj/project.pbxproj",
+				"platforms/ios/ShakeTonBDE.xcodeproj/project.pbxproj"
+			],
+			[
+				"plugins/android.json",
+				"plugins/android.json"
+			],
+			[
+				"plugins/org.apache.cordova.camera/.fetch.json",
+				"plugins/org.apache.cordova.camera/.fetch.json"
+			],
+			[
+				"plugins/org.apache.cordova.device/.fetch.json",
+				"plugins/org.apache.cordova.device/.fetch.json"
+			],
+			[
+				"emula",
+				"platforms/ios/cordova/lib/install-emulator"
+			],
+			[
+				"platforms/ios/www/cordova_plugins.js",
+				"platforms/ios/www/cordova_plugins.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/workspace/IESA/shaketonbde/shaketonbde.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 247.0,
+		"selected_items":
+		[
+			[
+				"",
+				"$addFoldLine"
+			]
+		],
+		"width": 584.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

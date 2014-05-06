@@ -1,5 +1,6 @@
 {
     "1": {
+        "id": "1",
         "name": "American Party",
         "date": "2014-05-11,20:00",
         "coord": "48.8615679,2.3217371",
@@ -19,12 +20,13 @@
             "Entrée sur place : 15€ + 1 conso"
         ],
         "dressing": [
-            "2€/article",
+            "2€/ article",
             "3€/ casque de moto, pas de musique BRA",
             "4€/ ton gros sac de meuf bien lourd"
         ]
     },
     "2": {
+        "id": "2",
         "name": "Throw your cat Party",
         "date": "2014-05-24,19:00",
         "coord": "48.8634916,2.3274943",
