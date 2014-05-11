@@ -64,6 +64,8 @@
     <string>1.0</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
+    <key>NSMainNibFile</key>
+    <string></string>
     <key>NSMainNibFile~ipad</key>
     <string></string>
     <key>UISupportedInterfaceOrientations</key>
@@ -74,6 +76,7 @@
     <array>
       <string>UIInterfaceOrientationPortrait</string>
       <string>UIInterfaceOrientationLandscapeLeft</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
   </dict>

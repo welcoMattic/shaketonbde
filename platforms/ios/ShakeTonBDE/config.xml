@@ -19,12 +19,12 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
-    <feature name="Device">
-        <param name="ios-package" value="CDVDevice" />
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
     </feature>
     <name>ShakeTonBDE</name>
     <description>
-        L'appli pour ne plus rater les soirées de ton BDE
+      L'appli pour ne plus rater les soirées de ton BDE
     </description>
     <author email="shake@tonbde.com" href="http://shaketonbde.com/">
       New York Cyborgs
@@ -41,10 +41,13 @@
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <feature name="Contacts">
         <param name="ios-package" value="CDVContacts" />
     </feature>
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
     </feature>
 </widget>

@@ -4,12 +4,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
     <name>ShakeTonBDE</name>
     <description>
-        L'appli pour ne plus rater les soirées de ton BDE
+      L'appli pour ne plus rater les soirées de ton BDE
     </description>
     <author email="shake@tonbde.com" href="http://shaketonbde.com/">
       New York Cyborgs
@@ -27,11 +24,15 @@
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         <param name="ios-package" value="CDVCamera" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <feature name="Contacts">
         <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         <param name="ios-package" value="CDVContacts" />
     </feature>
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+        <param name="ios-package" value="CDVDevice" />
     </feature>
 </widget>

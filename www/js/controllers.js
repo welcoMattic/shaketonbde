@@ -34,12 +34,12 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
   };
 
   function makeInfoWindowEvent(map, infowindow, marker) {
-    google.maps.event.addListener(marker, 'ng-click', function() {
+    google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map, marker);
     });
   }
 
-  function centreOnMe() {
+  $scope.centreOnMe = function() {
     if(!$scope.map)
       return;
 
@@ -80,7 +80,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
     { enableHighAccuracy: true });
   };
 
-  google.maps.event.addDomListener(window, 'load', initialize(centreOnMe));
+  google.maps.event.addDomListener(window, 'load', initialize($scope.centreOnMe));
 });
 
 
@@ -122,7 +122,6 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
       {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI
-        // sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
       }
     );
   };
@@ -136,15 +135,17 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
 
 Shaketonbde.controller('InviteCtrl', function($scope) {
   $scope.contacts = [];
-  $scope.chooseContact = function () {
-    var options = new ContactFindOptions();
-    options.fields = ["displayName", "name", "emails", "phoneNumbers"];
-    navigator.contacts.chooseContact(onSuccess, options);
+  function onSuccess(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
   };
 
-  function onSuccess(id, contact) {
-    $scope.$apply(function(contact) {
-      $scope.contacts.push(JSON.stringify(contact));
-    });
+  function onError(contactError) {
+    alert('onError!');
   };
+
+  var options      = new ContactFindOptions();
+  options.filter   = "";
+  options.multiple = true;
+  var fields       = ["displayName", "name"];
+  navigator.contacts.find(fields, onSuccess, onError, options);
 });
