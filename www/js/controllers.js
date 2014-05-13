@@ -14,15 +14,25 @@ Shaketonbde.controller('AppCtrl', function($scope) {
 ========================================*/
 
 Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
+  var markersArray = [];
+
+  // Map washer
+  var clearMap = function() {
+    for (var i = 0; i < markersArray.length; i++ ) {
+      markersArray[i].setMap(null);
+    }
+    markersArray.length = 0;
+  }
+
   function initialize(callback) {
     var mapOptions = {
-          center: new google.maps.LatLng(48.8588589,2.3470599),
+          center: new window.google.maps.LatLng(48.8588589,2.3470599),
           zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-        }
-      , map = new google.maps.Map(document.getElementById("map"), mapOptions);
+          mapTypeId: window.google.maps.MapTypeId.ROADMAP,
+        },
+        map = new window.google.maps.Map(document.getElementById('map'), mapOptions);
 
-    google.maps.event.addDomListener(document.getElementById('map'), 'mousedown',
+    window.google.maps.event.addDomListener(document.getElementById('map'), 'mousedown',
       function(e) {
         e.preventDefault();
         return false;
@@ -31,56 +41,65 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     $scope.map = map;
     callback();
-  };
+  }
 
+  // Tooltip marker helper
   function makeInfoWindowEvent(map, infowindow, marker) {
-    google.maps.event.addListener(marker, 'click', function() {
+    window.google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(map, marker);
     });
   }
 
   $scope.centreOnMe = function() {
-    if(!$scope.map)
+    if(!$scope.map) {
       return;
+    }
 
-    $scope.loading = $ionicLoading.show({
-      content: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>',
-      showBackdrop: false
-    });
+    clearMap();
+
+    $scope.show = function() {
+      $ionicLoading.show({
+        template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>',
+        duration: 500
+      });
+    };
 
     navigator.geolocation.getCurrentPosition(function(pos) {
-      var position = pos.coords.latitude +','+pos.coords.longitude
-        , myPos = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude)
-        , Events = new Event.query();
+      var myPos = new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+          Events = new Event.query();
 
       Events.$promise.then(function(events) {
         $scope.events = events;
         angular.forEach($scope.events, function(event, key) {
           if(key === event.id) {
-            var eventPosition = new google.maps.LatLng(event.coord.split(',')[0], event.coord.split(',')[1]);
-            var marker = new google.maps.Marker({ position: eventPosition, map: $scope.map });
-            var infowindow = new google.maps.InfoWindow({ content: event.name });
+            var eventPosition = new window.google.maps.LatLng(event.coord.split(',')[0], event.coord.split(',')[1]);
+            var marker = new window.google.maps.Marker({ position: eventPosition, map: $scope.map });
+            markersArray.push(marker);
+            var infowindow = new window.google.maps.InfoWindow({ content: event.name });
             makeInfoWindowEvent($scope.map, infowindow, marker);
           }
         });
       });
 
       $scope.map.setCenter(myPos);
-      var marker = new google.maps.Marker({ position: myPos, map: $scope.map });
+      var userMarker = new window.google.maps.Marker({ position: myPos, map: $scope.map });
+      markersArray.push(userMarker);
       /**
         TODO:
         - replace by perso icon
       **/
-      var infowindow = new google.maps.InfoWindow({ content: "You" });
-      makeInfoWindowEvent($scope.map, infowindow, marker);
-      $ionicLoading.hide();
+      var infowindow = new window.google.maps.InfoWindow({ content: 'You' });
+      makeInfoWindowEvent($scope.map, infowindow, userMarker);
+      $scope.hide = function(){
+        $ionicLoading.hide();
+      };
     }, function(error) {
-      alert('Impossible de te trouver: ' + error.message);
+      window.alert('Impossible de te trouver: ' + error.message);
     },
     { enableHighAccuracy: true });
   };
 
-  google.maps.event.addDomListener(window, 'load', initialize($scope.centreOnMe));
+  window.google.maps.event.addDomListener(window, 'load', initialize($scope.centreOnMe));
 });
 
 
@@ -112,7 +131,7 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
   }
 
   function onFail(message) {
-    alert('Failed because: ' + message);
+    window.alert('Failed because: ' + message);
   }
 
   $scope.takePicture = function() {
@@ -133,10 +152,17 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
 =            Invite Controller            =
 =========================================*/
 
-Shaketonbde.controller('InviteCtrl', function($scope) {
+Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
+  $scope.show = function() {
+    $ionicLoading.show({
+      template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>',
+      duration: 1000
+    });
+  };
+
   function onSuccess(data) {
     var contacts = [];
-    angular.forEach(data, function(c, key) {
+    angular.forEach(data, function(c) {
       var contact = {};
       contact.name = c.name.formatted;
       contact.phoneNumber = (c.phoneNumbers) ? c.phoneNumbers[0].value : '';
@@ -145,24 +171,26 @@ Shaketonbde.controller('InviteCtrl', function($scope) {
       contacts.push(contact);
     });
     $scope.contacts = contacts;
-  };
+  }
 
   function onError(contactError) {
     console.log('onError ContactsLoad: ', contactError.code);
-  };
-  // Code executed on simulator or device
+  }
+
   if(ionic.Platform.isWebView()) {
-    var options      = new ContactFindOptions();
-    options.filter = "";
+    // Code executed on simulator or device
+    var options = new ContactFindOptions();
+    options.filter = '';
     options.multiple = true;
-    console.log(options);
-    var fields       = ["name", "emails", "ims", "phoneNumbers"];
-    navigator.contacts.find(fields, onSuccess, onError, options);
-  // Code executed in browser (ONLY TEST)
+    var fields = ['name', 'emails', 'ims', 'phoneNumbers'];
+    setTimeout(function() {
+      navigator.contacts.find(fields, onSuccess, onError, options);
+    }, 3000);
   } else {
+    // Code executed in browser (ONLY FOR TEST)
     $scope.contacts = [];
-    var contacts = [{ "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : [ { "id" : 0,          "pref" : false,          "type" : "other",          "value" : "mathieu.santostefano@gmail.com"        },        { "id" : 1,          "pref" : false,          "type" : "work",          "value" : "mathieu@kontestapp.com"        },        { "id" : 2,          "pref" : false,          "type" : "home",          "value" : "mathieu.santostefano@hotmail.fr"        },        { "id" : 3,          "pref" : false,          "type" : "other",          "value" : "zic_it_cellar@hotmail.fr"        },        { "id" : 4,          "pref" : false,          "type" : "other",          "value" : "welcomattic@me.com"        }      ],    "id" : 134,    "ims" : [ { "id" : 0,          "type" : "other",          "value" : "mathieu.santostefano"        } ],    "name" : { "familyName" : "Santostefano",        "formatted" : "Mathieu Santostefano",        "givenName" : "Mathieu",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : [ { "id" : 0, "pref" : false,        "type" : "home",        "value" : "0659295103"      } ],    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 136,    "ims" : null,    "name" : { "familyName" : "Bango",        "formatted" : "Howard Bango",        "givenName" : "Howard",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 138,    "ims" : null,    "name" : { "familyName" : "Anne",        "formatted" : "Cécile Anne",        "givenName" : "Cécile",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 140,    "ims" : null,    "name" : { "familyName" : "Dubreuil",        "formatted" : "Clémence Dubreuil",        "givenName" : "Clémence",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 141,    "ims" : null,    "name" : { "familyName" : "Santostefano",        "formatted" : "Nanou Santostefano",        "givenName" : "Nanou",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  }];  //   $scope.contacts = [];
-    angular.forEach(contacts, function(c, key) {
+    var contacts = [{ 'addresses' : null,    'birthday' : null,    'categories' : null,    'displayName' : null,    'emails' : [ { 'id' : 0,          'pref' : false,          'type' : 'other',          'value' : 'mathieu.santostefano@gmail.com'        },        { 'id' : 1,          'pref' : false,          'type' : 'work',          'value' : 'mathieu@kontestapp.com'        },        { 'id' : 2,          'pref' : false,          'type' : 'home',          'value' : 'mathieu.santostefano@hotmail.fr'        },        { 'id' : 3,          'pref' : false,          'type' : 'other',          'value' : 'zic_it_cellar@hotmail.fr'        },        { 'id' : 4,          'pref' : false,          'type' : 'other',          'value' : 'welcomattic@me.com'        }      ],    'id' : 134,    'ims' : [ { 'id' : 0,          'type' : 'other',          'value' : 'mathieu.santostefano'        } ],    'name' : { 'familyName' : 'Santostefano',        'formatted' : 'Mathieu Santostefano',        'givenName' : 'Mathieu',        'honorificPrefix' : null,        'honorificSuffix' : null,        'middleName' : null      },    'nickname' : null,    'note' : null,    'organizations' : null,    'phoneNumbers' : [ { 'id' : 0, 'pref' : false,        'type' : 'home',        'value' : '0659295103'      } ],    'photos' : null,    'rawId' : null,    'urls' : null  },  { 'addresses' : null,    'birthday' : null,    'categories' : null,    'displayName' : null,    'emails' : null,    'id' : 136,    'ims' : null,    'name' : { 'familyName' : 'Bango',        'formatted' : 'Howard Bango',        'givenName' : 'Howard',        'honorificPrefix' : null,        'honorificSuffix' : null,        'middleName' : null      },    'nickname' : null,    'note' : null,    'organizations' : null,    'phoneNumbers' : null,    'photos' : null,    'rawId' : null,    'urls' : null  },  { 'addresses' : null,    'birthday' : null,    'categories' : null,    'displayName' : null,    'emails' : null,    'id' : 138,    'ims' : null,    'name' : { 'familyName' : 'Anne',        'formatted' : 'Cécile Anne',        'givenName' : 'Cécile',        'honorificPrefix' : null,        'honorificSuffix' : null,        'middleName' : null      },    'nickname' : null,    'note' : null,    'organizations' : null,    'phoneNumbers' : null,    'photos' : null,    'rawId' : null,    'urls' : null  },  { 'addresses' : null,    'birthday' : null,    'categories' : null,    'displayName' : null,    'emails' : null,    'id' : 140,    'ims' : null,    'name' : { 'familyName' : 'Dubreuil',        'formatted' : 'Clémence Dubreuil',        'givenName' : 'Clémence',        'honorificPrefix' : null,        'honorificSuffix' : null,        'middleName' : null      },    'nickname' : null,    'note' : null,    'organizations' : null,    'phoneNumbers' : null,    'photos' : null,    'rawId' : null,    'urls' : null  },  { 'addresses' : null,    'birthday' : null,    'categories' : null,    'displayName' : null,    'emails' : null,    'id' : 141,    'ims' : null,    'name' : { 'familyName' : 'Santostefano',        'formatted' : 'Nanou Santostefano',        'givenName' : 'Nanou',        'honorificPrefix' : null,        'honorificSuffix' : null,        'middleName' : null      },    'nickname' : null,    'note' : null,    'organizations' : null,    'phoneNumbers' : null,    'photos' : null,    'rawId' : null,    'urls' : null  }];  //   $scope.contacts = [];
+    angular.forEach(contacts, function(c) {
       var contact = {};
       contact.name = c.name.formatted;
       contact.phoneNumber = (c.phoneNumbers) ? c.phoneNumbers[0].value : '';
@@ -171,5 +199,8 @@ Shaketonbde.controller('InviteCtrl', function($scope) {
       $scope.contacts.push(contact);
     });
   }
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
 
 });
