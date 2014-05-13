@@ -3,9 +3,13 @@ Shake Ton BDE
 
 ## Requirements
 
-Require : Cordova CLI, Ionic CLI & Gulp CLI
+Require : Cordova CLI, Ionic CLI
 
 `$ sudo npm i -g cordova ionic gulp`
+
+Install dependencies
+
+`$ npm i`
 
 Add platforms :
 
