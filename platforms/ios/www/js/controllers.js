@@ -57,12 +57,9 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     clearMap();
 
-    $scope.show = function() {
-      $ionicLoading.show({
-        template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>',
-        duration: 500
-      });
-    };
+    $ionicLoading.show({
+      template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>'
+    });
 
     navigator.geolocation.getCurrentPosition(function(pos) {
       var myPos = new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
@@ -90,9 +87,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
       **/
       var infowindow = new window.google.maps.InfoWindow({ content: 'You' });
       makeInfoWindowEvent($scope.map, infowindow, userMarker);
-      $scope.hide = function(){
-        $ionicLoading.hide();
-      };
+      $ionicLoading.hide();
     }, function(error) {
       window.alert('Impossible de te trouver: ' + error.message);
     },
@@ -153,12 +148,6 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
 =========================================*/
 
 Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
-  $scope.show = function() {
-    $ionicLoading.show({
-      template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>',
-      duration: 1000
-    });
-  };
 
   function onSuccess(data) {
     var contacts = [];
@@ -171,10 +160,13 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
       contacts.push(contact);
     });
     $scope.contacts = contacts;
+    $ionicLoading.hide();
   }
 
   function onError(contactError) {
+    alert('Erreur lors du chargement des contacts');
     console.log('onError ContactsLoad: ', contactError.code);
+    $ionicLoading.hide();
   }
 
   if(ionic.Platform.isWebView()) {
@@ -183,9 +175,10 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
     options.filter = '';
     options.multiple = true;
     var fields = ['name', 'emails', 'ims', 'phoneNumbers'];
-    setTimeout(function() {
-      navigator.contacts.find(fields, onSuccess, onError, options);
-    }, 3000);
+    $ionicLoading.show({
+      template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>'
+    });
+    navigator.contacts.find(fields, onSuccess, onError, options);
   } else {
     // Code executed in browser (ONLY FOR TEST)
     $scope.contacts = [];
@@ -199,8 +192,5 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
       $scope.contacts.push(contact);
     });
   }
-  $scope.hide = function(){
-    $ionicLoading.hide();
-  };
 
 });
