@@ -153,6 +153,13 @@ module.exports = [
         "merges": [
             "Contact"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
+        "id": "org.apache.cordova.statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -162,7 +169,8 @@ module.exports.metadata =
     "org.apache.cordova.device": "0.2.9",
     "org.apache.cordova.geolocation": "0.3.7",
     "org.apache.cordova.camera": "0.2.9",
-    "org.apache.cordova.contacts": "0.2.10"
+    "org.apache.cordova.contacts": "0.2.10",
+    "org.apache.cordova.statusbar": "0.1.3"
 }
 // BOTTOM OF METADATA
 });

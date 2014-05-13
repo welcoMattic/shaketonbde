@@ -22,7 +22,7 @@ package com.iesamultimedia.shaketonbde;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class HelloCordova extends CordovaActivity 
+public class ShakeTonBDE extends CordovaActivity 
 {
     @Override
     public void onCreate(Bundle savedInstanceState)

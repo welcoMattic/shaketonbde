@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		03F139666215405F9DC86941 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F3A145E2824D989E1DC4AD /* CDVLogger.m */; };
 		0F2F5AC5680049B2AFE35604 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3E3AA7FFA5476A8FFAD418 /* CDVLocation.m */; };
@@ -49,6 +48,7 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		E7B06C5B7D2E426D8730CD95 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B5D8A27CC41F2A7A07F67 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EA35C179DC854B44B9A8DE42 /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE5F5A6E424E808FDBA7 /* CDVContact.m */; };
+		0F96A5338D794A81865DA287 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8E96F57544C3A855EE400 /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +131,8 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ShakeTonBDE/config.xml; sourceTree = "<group>"; };
 		F8C7B19D205D46DAA5791688 /* AddressBook.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		FD7D6DAC181E451991EEF29B /* CDVJpegHeaderWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVJpegHeaderWriter.h; path = org.apache.cordova.camera/CDVJpegHeaderWriter.h; sourceTree = "<group>"; };
+		DBA8E96F57544C3A855EE400 /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "org.apache.cordova.statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		49170D8D3A0B4765B17E2008 /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "org.apache.cordova.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,8 @@
 				803DAE5F5A6E424E808FDBA7 /* CDVContact.m */,
 				014D41B70F534EC5B91F4C3F /* CDVContacts.h */,
 				54516F8750C14BCD9262B694 /* CDVContact.h */,
+				DBA8E96F57544C3A855EE400 /* CDVStatusBar.m */,
+				49170D8D3A0B4765B17E2008 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = ShakeTonBDE/Plugins;
@@ -473,6 +477,7 @@
 				9BC26E6948884B80AE0CD76C /* CDVJpegHeaderWriter.m in Sources */,
 				6EE2649FAE7944F1B0169480 /* CDVContacts.m in Sources */,
 				EA35C179DC854B44B9A8DE42 /* CDVContact.m in Sources */,
+				0F96A5338D794A81865DA287 /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

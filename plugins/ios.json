@@ -27,6 +27,18 @@
                         {
                             "xml": "<feature name=\"Contacts\"><param name=\"ios-package\" value=\"CDVContacts\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -93,6 +105,9 @@
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         },
         "org.apache.cordova.contacts": {
+            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
+        },
+        "org.apache.cordova.statusbar": {
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         }
     },
