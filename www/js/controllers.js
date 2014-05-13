@@ -90,7 +90,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 ===============================================*/
 
 Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
-  Event.query().$promise.then(function(events) {
+  Event.query().$promise.then(function(events) {
     var event = events[$stateParams.eventId];
     event.date = new Date(event.date);
     $scope.event = event;
@@ -150,6 +150,7 @@ Shaketonbde.controller('InviteCtrl', function($scope) {
   function onError(contactError) {
     console.log('onError ContactsLoad: ', contactError.code);
   };
+  // Code executed on simulator or device
   if(ionic.Platform.isWebView()) {
     var options      = new ContactFindOptions();
     options.filter = "";
@@ -157,6 +158,7 @@ Shaketonbde.controller('InviteCtrl', function($scope) {
     console.log(options);
     var fields       = ["name", "emails", "ims", "phoneNumbers"];
     navigator.contacts.find(fields, onSuccess, onError, options);
+  // Code executed in browser (ONLY TEST)
   } else {
     $scope.contacts = [];
     var contacts = [{ "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : [ { "id" : 0,          "pref" : false,          "type" : "other",          "value" : "mathieu.santostefano@gmail.com"        },        { "id" : 1,          "pref" : false,          "type" : "work",          "value" : "mathieu@kontestapp.com"        },        { "id" : 2,          "pref" : false,          "type" : "home",          "value" : "mathieu.santostefano@hotmail.fr"        },        { "id" : 3,          "pref" : false,          "type" : "other",          "value" : "zic_it_cellar@hotmail.fr"        },        { "id" : 4,          "pref" : false,          "type" : "other",          "value" : "welcomattic@me.com"        }      ],    "id" : 134,    "ims" : [ { "id" : 0,          "type" : "other",          "value" : "mathieu.santostefano"        } ],    "name" : { "familyName" : "Santostefano",        "formatted" : "Mathieu Santostefano",        "givenName" : "Mathieu",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : [ { "id" : 0, "pref" : false,        "type" : "home",        "value" : "0659295103"      } ],    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 136,    "ims" : null,    "name" : { "familyName" : "Bango",        "formatted" : "Howard Bango",        "givenName" : "Howard",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 138,    "ims" : null,    "name" : { "familyName" : "Anne",        "formatted" : "Cécile Anne",        "givenName" : "Cécile",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 140,    "ims" : null,    "name" : { "familyName" : "Dubreuil",        "formatted" : "Clémence Dubreuil",        "givenName" : "Clémence",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  },  { "addresses" : null,    "birthday" : null,    "categories" : null,    "displayName" : null,    "emails" : null,    "id" : 141,    "ims" : null,    "name" : { "familyName" : "Santostefano",        "formatted" : "Nanou Santostefano",        "givenName" : "Nanou",        "honorificPrefix" : null,        "honorificSuffix" : null,        "middleName" : null      },    "nickname" : null,    "note" : null,    "organizations" : null,    "phoneNumbers" : null,    "photos" : null,    "rawId" : null,    "urls" : null  }];  //   $scope.contacts = [];
