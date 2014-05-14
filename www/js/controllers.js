@@ -13,7 +13,36 @@ Shaketonbde.controller('AppCtrl', function($scope) {
 =            Events Controller           =
 ========================================*/
 
-Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event, $q) {
+
+  function getLang() {
+    var deferred = $q.defer();
+    var lang;
+    function onSuccess(language) {
+      lang = language.value;
+      return lang;
+    }
+
+    function onError() {
+      return 'Error getting lang';
+    }
+
+    if (navigator.globalization) {
+      navigator.globalization.getPreferredLanguage(onSuccess, onError);
+      deferred.resolve(lang);
+    } else {
+      deferred.reject('Error getting lang (promise rejected)');
+    }
+
+    return deferred.promise;
+  }
+
+  getLang().then(function(r) {
+    console.log(r);
+  }).catch(function(e) {
+    console.log(e);
+  });
+
   var markersArray = [];
 
   // Map washer
@@ -63,8 +92,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     navigator.geolocation.getCurrentPosition(function(pos) {
       var myPos = new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-          Events = new Event.jsonp_query();
-          console.log(Events);
+          Events = new Event.query();
 
       Events.$promise.then(function(events) {
         $scope.events = events;

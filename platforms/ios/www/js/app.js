@@ -10,6 +10,7 @@ Shaketonbde.run(function($ionicPlatform) {
 });
 
 
+
 /*==============================
 =            Router            =
 ==============================*/

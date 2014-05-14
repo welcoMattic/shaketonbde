@@ -13,7 +13,33 @@ Shaketonbde.controller('AppCtrl', function($scope) {
 =            Events Controller           =
 ========================================*/
 
-Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event, $q) {
+
+  function getLang() {
+    var deferred = $q.defer();
+    var lang;
+    function onSuccess(language) {
+      lang = language.value;
+      return lang;
+    }
+
+    function onError() {
+      return 'Error getting lang';
+    }
+
+    if (navigator.globalization.getPreferredLanguage(onSuccess, onError)) {
+      deferred.resolve(lang);
+    } else {
+      deferred.reject('Error getting lang (promise rejected)');
+    }
+
+    return deferred.promise;
+  }
+
+  getLang().then(function(r) {
+    alert(r);
+  });
+
   var markersArray = [];
 
   // Map washer
@@ -76,6 +102,9 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
             makeInfoWindowEvent($scope.map, infowindow, marker);
           }
         });
+      })
+      .catch(function(e){
+        console.log(e);
       });
 
       $scope.map.setCenter(myPos);
@@ -119,14 +148,14 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 
 Shaketonbde.controller('CameraCtrl', function($scope) {
   function onSuccess(imageURI) {
-    console.log(imageURI);
     $scope.$apply(function() {
       $scope.imageURI = imageURI;
     });
   }
 
   function onFail(message) {
-    window.alert('Failed because: ' + message);
+    alert('Erreur lors de la récupération de la photo');
+    console.log('Failed because: ' + message);
   }
 
   $scope.takePicture = function() {
