@@ -13,6 +13,10 @@ h1.title.ng-binding {
   right: 0 !important;
 }
 
+#picture {
+
+}
+
 @font-face {
   font-family: 'icomoon';
   src:url('http://s3.amazonaws.com/icomoonfonts/4/6/f.eot');

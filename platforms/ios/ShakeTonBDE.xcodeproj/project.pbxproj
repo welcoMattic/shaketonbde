@@ -49,6 +49,7 @@
 		E7B06C5B7D2E426D8730CD95 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1B5D8A27CC41F2A7A07F67 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		EA35C179DC854B44B9A8DE42 /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE5F5A6E424E808FDBA7 /* CDVContact.m */; };
 		0F96A5338D794A81865DA287 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8E96F57544C3A855EE400 /* CDVStatusBar.m */; };
+		2F3A7A99186841A5810E045B /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9A0C918DB4E70A89D553D /* CDVGlobalization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		FD7D6DAC181E451991EEF29B /* CDVJpegHeaderWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVJpegHeaderWriter.h; path = org.apache.cordova.camera/CDVJpegHeaderWriter.h; sourceTree = "<group>"; };
 		DBA8E96F57544C3A855EE400 /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "org.apache.cordova.statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		49170D8D3A0B4765B17E2008 /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "org.apache.cordova.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		2BB9A0C918DB4E70A89D553D /* CDVGlobalization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVGlobalization.m"; path = "org.apache.cordova.globalization/CDVGlobalization.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		11AAA6D1F30847F0960EF343 /* CDVGlobalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVGlobalization.h"; path = "org.apache.cordova.globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +279,8 @@
 				54516F8750C14BCD9262B694 /* CDVContact.h */,
 				DBA8E96F57544C3A855EE400 /* CDVStatusBar.m */,
 				49170D8D3A0B4765B17E2008 /* CDVStatusBar.h */,
+				2BB9A0C918DB4E70A89D553D /* CDVGlobalization.m */,
+				11AAA6D1F30847F0960EF343 /* CDVGlobalization.h */,
 			);
 			name = Plugins;
 			path = ShakeTonBDE/Plugins;
@@ -478,6 +483,7 @@
 				6EE2649FAE7944F1B0169480 /* CDVContacts.m in Sources */,
 				EA35C179DC854B44B9A8DE42 /* CDVContact.m in Sources */,
 				0F96A5338D794A81865DA287 /* CDVStatusBar.m in Sources */,
+				2F3A7A99186841A5810E045B /* CDVGlobalization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

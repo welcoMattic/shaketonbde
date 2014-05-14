@@ -27,6 +27,8 @@ Install plugins :
 
 `$ cordova plugin add org.apache.cordova.contacts`
 
+`$ cordova plugin add org.apache.cordova.globalization`
+
 ## How to build on CLI
 
 First time :

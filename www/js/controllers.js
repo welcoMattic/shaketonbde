@@ -63,7 +63,8 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     navigator.geolocation.getCurrentPosition(function(pos) {
       var myPos = new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-          Events = new Event.query();
+          Events = new Event.jsonp_query();
+          console.log(Events);
 
       Events.$promise.then(function(events) {
         $scope.events = events;
@@ -76,6 +77,9 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
             makeInfoWindowEvent($scope.map, infowindow, marker);
           }
         });
+      })
+      .catch(function(e){
+        console.log(e);
       });
 
       $scope.map.setCenter(myPos);
@@ -119,14 +123,14 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 
 Shaketonbde.controller('CameraCtrl', function($scope) {
   function onSuccess(imageURI) {
-    console.log(imageURI);
     $scope.$apply(function() {
       $scope.imageURI = imageURI;
     });
   }
 
   function onFail(message) {
-    window.alert('Failed because: ' + message);
+    alert('Erreur lors de la récupération de la photo');
+    console.log('Failed because: ' + message);
   }
 
   $scope.takePicture = function() {

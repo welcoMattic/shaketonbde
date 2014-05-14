@@ -35,4 +35,7 @@
         <param name="android-package" value="org.apache.cordova.device.Device" />
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
+    </feature>
 </widget>

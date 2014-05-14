@@ -39,6 +39,10 @@
                         {
                             "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -108,6 +112,9 @@
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         },
         "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
+        },
+        "org.apache.cordova.globalization": {
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         }
     },

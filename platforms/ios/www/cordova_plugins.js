@@ -160,6 +160,20 @@ module.exports = [
         "clobbers": [
             "window.StatusBar"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
+        "id": "org.apache.cordova.globalization.GlobalizationError",
+        "clobbers": [
+            "window.GlobalizationError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.globalization/www/globalization.js",
+        "id": "org.apache.cordova.globalization.globalization",
+        "clobbers": [
+            "navigator.globalization"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -170,7 +184,8 @@ module.exports.metadata =
     "org.apache.cordova.geolocation": "0.3.7",
     "org.apache.cordova.camera": "0.2.9",
     "org.apache.cordova.contacts": "0.2.10",
-    "org.apache.cordova.statusbar": "0.1.3"
+    "org.apache.cordova.statusbar": "0.1.3",
+    "org.apache.cordova.globalization": "0.2.7"
 }
 // BOTTOM OF METADATA
 });
