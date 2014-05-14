@@ -1,4 +1,4 @@
-{
+events({
     "1": {
         "id": "1",
         "name": "American Party",
@@ -52,4 +52,4 @@
             "4€/ ton gros sac de meuf bien lourd"
         ]
     }
-}
+})
