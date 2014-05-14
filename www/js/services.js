@@ -6,16 +6,6 @@
 
 Shaketonbde.factory('Event', ['$resource',
   function($resource){
-    return $resource(
-      'https://raw.githubusercontent.com/welcoMattic/shaketonbde/master/www/events.json',
-      {
-        callback: 'events'
-      },
-      {
-        jsonp_query: {
-          method: 'JSONP', isArray: true
-        }
-      }
-    );
+    return $resource('http://www.corsproxy.com/welcomattic.com/events.json', {}, {'query': {method: 'GET', isArray: false}});
   }]
 );

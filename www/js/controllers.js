@@ -63,8 +63,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     navigator.geolocation.getCurrentPosition(function(pos) {
       var myPos = new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-          Events = new Event.jsonp_query();
-          console.log(Events);
+          Events = new Event.query();
 
       Events.$promise.then(function(events) {
         $scope.events = events;
