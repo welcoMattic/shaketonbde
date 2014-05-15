@@ -106,11 +106,14 @@
 /workspace/shaketonbde/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-icons.scss \
 /workspace/shaketonbde/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-variables.scss \
 /workspace/shaketonbde/platforms/android/assets/www/lib/ionic/scss/ionicons/ionicons.scss \
+/workspace/shaketonbde/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.contacts \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.globalization \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.statusbar \
+/workspace/shaketonbde/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing/www \
+/workspace/shaketonbde/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera/www \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/Camera.js \
 /workspace/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraConstants.js \

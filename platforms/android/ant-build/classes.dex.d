@@ -6,6 +6,8 @@
 /workspace/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R$xml.class \
 /workspace/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R.class \
 /workspace/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/ShakeTonBDE.class \
+/workspace/shaketonbde/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing$1.class \
+/workspace/shaketonbde/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing.class \
 /workspace/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
 /workspace/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
 /workspace/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \

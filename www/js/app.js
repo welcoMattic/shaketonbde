@@ -9,6 +9,9 @@ Shaketonbde.run(function($ionicPlatform) {
   });
 });
 
+Shaketonbde.config(function($compileProvider){
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+})
 
 /*==============================
 =            Router            =

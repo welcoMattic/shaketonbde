@@ -120,41 +120,34 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 =            Camera Controller            =
 =========================================*/
 
-Shaketonbde.controller('CameraCtrl', function($scope) {
-  function onSuccess(imageURI) {
-    setTimeout(function() {
-      $scope.$apply(function() {
-        $scope.imageURI = imageURI;
-      });
-      $scope.share = function() {
-        window.plugins.socialsharing.share(
-          null, null, imageURI, null,
-          function() {
-            window.location.replace('#/app/camera');
-          },
-          function(errormsg) {
-            console.log(errormsg);
-            window.location.replace('#/app/camera');
+Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
+  $scope.takePhoto = function() {
+    Camera.getPicture().then(function(imageURI) {
+      setTimeout(function() {
+        $scope.$apply(function() {
+          if(imageURI) {
+            $scope.isImageURI = true;
+            $scope.imageURI = imageURI;
+          } else {
+            $scope.isImageURI = false;
           }
-        )
-      };
+        });
+        $scope.share = function() {
+          window.plugins.socialsharing.share(
+            null, null, imageURI, null,
+            function() {
+              window.location.replace('#/app/camera');
+            },
+            function(errormsg) {
+              console.log(errormsg);
+              window.location.replace('#/app/camera');
+            }
+          )
+        };
+      }, function(err) {
+        console.log('Failed because: ' + err);
+      });
     }, 0);
-  }
-
-  function onFail(message) {
-    alert('Erreur lors de la récupération de la photo');
-    console.log('Failed because: ' + message);
-  }
-
-  $scope.takePicture = function() {
-    navigator.camera.getPicture(
-      onSuccess,
-      onFail,
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      }
-    );
   };
 });
 
