@@ -175,11 +175,10 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
     });
     $scope.contacts = contacts;
     $ionicLoading.hide();
-    $scope.invite = function(num) {
-        console.log(num);
+    $scope.invite = function(num, target) {
         if (num == 1) {
             window.plugins.socialsharing.shareViaSMS(
-                'My cool message', '0650560218',
+                'My cool message', target,
                 function(msg) {
                     console.log("ok");//window.location.replace('#/app/invite');
                 },

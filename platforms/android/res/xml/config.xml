@@ -4,6 +4,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="UniversalAnalytics">
+        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+    </feature>
     <name>ShakeTonBDE</name>
     <description>
       L'appli pour ne plus rater les soirées de ton BDE
@@ -21,21 +24,22 @@
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
     <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
         <param name="ios-package" value="CDVCamera" />
     </feature>
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
     <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
         <param name="ios-package" value="CDVContacts" />
     </feature>
     <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
         <param name="ios-package" value="CDVDevice" />
     </feature>
     <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
         <param name="ios-package" value="SocialSharing" />
-    </feature>
-    <feature name="Globalization">
-        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
     </feature>
 </widget>
