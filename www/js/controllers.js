@@ -175,6 +175,32 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
     });
     $scope.contacts = contacts;
     $ionicLoading.hide();
+    $scope.invite = function(num) {
+        console.log(num);
+        if (num == 1) {
+            window.plugins.socialsharing.shareViaSMS(
+                'My cool message', '0650560218',
+                function(msg) {
+                    console.log("ok");//window.location.replace('#/app/invite');
+                },
+                function(msg) {
+                    console.log("error");//window.location.replace('#/app/invite');
+                }
+            )
+        } else if (num == 2) {
+          window.plugins.socialsharing.share(
+                'Here my message;. Hey '+ contact.name +' !', 'Here the subject',
+                function(msg) {
+                    console.log("ok");
+                },
+                function(msg) {
+                    console.log("error");
+                }
+            )
+        } else {
+
+        }
+    };
   }
 
   function onError(contactError) {
@@ -206,5 +232,6 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
       $scope.contacts.push(contact);
     });
   }
+
 
 });

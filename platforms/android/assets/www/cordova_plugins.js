@@ -1,6 +1,13 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
+        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.camera/www/CameraConstants.js",
         "id": "org.apache.cordova.camera.Camera",
         "clobbers": [
@@ -99,13 +106,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
-        "id": "org.apache.cordova.statusbar.statusbar",
-        "clobbers": [
-            "window.StatusBar"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.globalization/www/GlobalizationError.js",
         "id": "org.apache.cordova.globalization.GlobalizationError",
         "clobbers": [
@@ -120,24 +120,24 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
-        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
+        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
+        "id": "org.apache.cordova.statusbar.statusbar",
         "clobbers": [
-            "window.plugins.socialsharing"
+            "window.StatusBar"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "nl.x-services.plugins.socialsharing": "4.0.8",
     "org.apache.cordova.camera": "0.2.9",
     "org.apache.cordova.console": "0.2.8",
     "org.apache.cordova.contacts": "0.2.10",
     "org.apache.cordova.device": "0.2.9",
     "org.apache.cordova.geolocation": "0.3.7",
-    "org.apache.cordova.statusbar": "0.1.3",
     "org.apache.cordova.globalization": "0.2.7",
-    "nl.x-services.plugins.socialsharing": "4.0.8"
+    "org.apache.cordova.statusbar": "0.1.3"
 }
 // BOTTOM OF METADATA
 });
