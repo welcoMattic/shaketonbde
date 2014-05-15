@@ -29,7 +29,8 @@
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/css/style.css \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/img/ionic.png \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/js/angular-resource.js \
-/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/js/angulartics-ga.min.js \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/js/angulartics-ga.js \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/js/angulartics.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/js/app.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/js/controllers.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/js/services.js \
