@@ -109,11 +109,14 @@
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/lib/ionic/scss/ionicons/_ionicons-variables.scss \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/lib/ionic/scss/ionicons/ionicons.scss \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.contacts \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing/www \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera/www \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/Camera.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera/www/CameraConstants.js \

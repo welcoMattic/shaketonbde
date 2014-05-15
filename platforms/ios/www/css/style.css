@@ -13,6 +13,15 @@ h1.title.ng-binding {
   right: 0 !important;
 }
 
+.take-picture {
+  height: 65px;
+}
+
+.take-picture .title {
+  line-height: 65px;
+  font-size: 22px;
+}
+
 @font-face {
   font-family: 'icomoon';
   src:url('http://s3.amazonaws.com/icomoonfonts/4/6/f.eot');

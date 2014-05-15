@@ -76,6 +76,9 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
             makeInfoWindowEvent($scope.map, infowindow, marker);
           }
         });
+      })
+      .catch(function(e){
+        console.log(e);
       });
 
       $scope.map.setCenter(myPos);
@@ -117,27 +120,34 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 =            Camera Controller            =
 =========================================*/
 
-Shaketonbde.controller('CameraCtrl', function($scope) {
-  function onSuccess(imageURI) {
-    console.log(imageURI);
-    $scope.$apply(function() {
-      $scope.imageURI = imageURI;
-    });
-  }
-
-  function onFail(message) {
-    window.alert('Failed because: ' + message);
-  }
-
-  $scope.takePicture = function() {
-    navigator.camera.getPicture(
-      onSuccess,
-      onFail,
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      }
-    );
+Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
+  $scope.takePhoto = function() {
+    Camera.getPicture().then(function(imageURI) {
+      setTimeout(function() {
+        $scope.$apply(function() {
+          if(imageURI) {
+            $scope.isImageURI = true;
+            $scope.imageURI = imageURI;
+          } else {
+            $scope.isImageURI = false;
+          }
+        });
+        $scope.share = function() {
+          window.plugins.socialsharing.share(
+            null, null, imageURI, null,
+            function() {
+              window.location.replace('#/app/camera');
+            },
+            function(errormsg) {
+              console.log(errormsg);
+              window.location.replace('#/app/camera');
+            }
+          )
+        };
+      }, function(err) {
+        console.log('Failed because: ' + err);
+      });
+    }, 0);
   };
 });
 
@@ -167,13 +177,23 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
             window.plugins.socialsharing.shareViaSMS(
                 'My cool message', '0650560218',
                 function(msg) {
-                    console.log('ok: ' + msg)
+                    console.log("ok");//window.location.replace('#/app/invite');
                 },
                 function(msg) {
-                    alert('error: ' + msg)
+                    console.log("error");//window.location.replace('#/app/invite');
                 }
             )
-        } else if (num == 2) {} else {
+        } else if (num == 2) {
+          window.plugins.socialsharing.share(
+                'Here my message;. Hey '+ contact.name +' !', 'Here the subject',
+                function(msg) {
+                    console.log("ok");
+                },
+                function(msg) {
+                    console.log("error");
+                }
+            )
+        } else {
 
         }
     };

@@ -7,6 +7,8 @@
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R$xml.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/R.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/com/iesamultimedia/shaketonbde/ShakeTonBDE.class \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing$1.class \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/nl/xservices/plugins/SocialSharing.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/CameraLauncher.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/ExifHelper.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/camera/FileHelper.class \

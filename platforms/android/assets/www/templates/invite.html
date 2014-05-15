@@ -4,10 +4,10 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <ion-list class="list">
-      <ion-item ng-show="{{contact.email || contact.phoneNumber || contact.facebook}}" class="item item-text-wrap contactShow" ng-repeat="contact in contacts | orderBy:'name'">
-        <p>Name : {{contact.name}}</p>
+      <ion-item ng-show="{{contact.name && contact.phoneNumber}}" class="item item-text-wrap contactShow" can-swipe="true" ng-repeat="contact in contacts | orderBy:'name'">
+        <p>{{contact.name}}</p>
         <ion-option-button class="button-calm contactButton" ng-show="{{contact.phoneNumber}}" ng-click="invite(1)">SMS</ion-option-button>
-        <ion-option-button class="button-assertive contactButton" ng-show="{{contact.email}}" ng-click="invite(2)">EMAIL</ion-option-button>
+       <!-- <ion-option-button class="button-assertive contactButton" ng-show="{{contact.email}}" ng-click="invite(2)">EMAIL</ion-option-button>-->
         <!--<ion-option-button class="button-calm contactButton" ng-show="{{contact.facebook}}">FB</ion-option-button>-->
       </ion-item>
     </ion-list>
