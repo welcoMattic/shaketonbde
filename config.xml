@@ -31,4 +31,7 @@
     <feature name="UniversalAnalytics">
       <param name="ios-package" value="UniversalAnalyticsPlugin" />
     </feature>
+    <feature name="SocialSharing">
+       <param name="ios-package" value="SocialSharing" />
+    </feature>
 </widget>

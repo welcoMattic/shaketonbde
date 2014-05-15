@@ -192,5 +192,23 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
       $scope.contacts.push(contact);
     });
   }
+  $scope.invite = function(num) {
+      console.log(num);
+        if(num == 1)
+        {
+            window.plugins.socialsharing.shareViaSMS(
+              'My cool message', '0650560218',
+              function(msg) {console.log('ok: ' + msg)},
+              function(msg) {alert('error: ' + msg)}
+            )
+        }
+        else if(num == 2)
+        {
+        }
+        else
+        {
+
+        }
+      };
 
 });

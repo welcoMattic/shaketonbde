@@ -39,4 +39,7 @@
         <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
         <param name="ios-package" value="UniversalAnalyticsPlugin" />
     </feature>
+    <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing" />
+    </feature>
 </widget>
