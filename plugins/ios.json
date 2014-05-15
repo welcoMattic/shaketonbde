@@ -43,6 +43,10 @@
                         {
                             "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -90,6 +94,18 @@
                             "xml": "true",
                             "count": 1
                         }
+                    ],
+                    "Social.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "MessageUI.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -115,6 +131,9 @@
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         },
         "org.apache.cordova.globalization": {
+            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
+        },
+        "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         }
     },

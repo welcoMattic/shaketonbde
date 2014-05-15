@@ -38,4 +38,8 @@
         <param name="android-package" value="org.apache.cordova.device.Device" />
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+        <param name="ios-package" value="SocialSharing" />
+    </feature>
 </widget>

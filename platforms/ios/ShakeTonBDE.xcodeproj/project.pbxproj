@@ -50,6 +50,9 @@
 		EA35C179DC854B44B9A8DE42 /* CDVContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 803DAE5F5A6E424E808FDBA7 /* CDVContact.m */; };
 		0F96A5338D794A81865DA287 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DBA8E96F57544C3A855EE400 /* CDVStatusBar.m */; };
 		2F3A7A99186841A5810E045B /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB9A0C918DB4E70A89D553D /* CDVGlobalization.m */; };
+		FCF8812093C24325B91F54BB /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = E00A0175D41241849F7FA58A /* SocialSharing.m */; };
+		12797ADDBD574F77B7F9F7A7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B7118AEC7349A29FF6713D /* Social.framework */; };
+		A4ED02C96B0A41D7AD4E1948 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5484B2E7E6F84AECB2D82409 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +139,10 @@
 		49170D8D3A0B4765B17E2008 /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "org.apache.cordova.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		2BB9A0C918DB4E70A89D553D /* CDVGlobalization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVGlobalization.m"; path = "org.apache.cordova.globalization/CDVGlobalization.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		11AAA6D1F30847F0960EF343 /* CDVGlobalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVGlobalization.h"; path = "org.apache.cordova.globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E00A0175D41241849F7FA58A /* SocialSharing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SocialSharing.m"; path = "nl.x-services.plugins.socialsharing/SocialSharing.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		4273195C3CCC4A60AD542205 /* SocialSharing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SocialSharing.h"; path = "nl.x-services.plugins.socialsharing/SocialSharing.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		14B7118AEC7349A29FF6713D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		5484B2E7E6F84AECB2D82409 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +158,8 @@
 				E7B06C5B7D2E426D8730CD95 /* ImageIO.framework in Frameworks */,
 				C839AD21ACA3430499C5F7EE /* AddressBook.framework in Frameworks */,
 				47506E7DECE245759987A6F8 /* AddressBookUI.framework in Frameworks */,
+				12797ADDBD574F77B7F9F7A7 /* Social.framework in Frameworks */,
+				A4ED02C96B0A41D7AD4E1948 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +256,8 @@
 				DA1B5D8A27CC41F2A7A07F67 /* ImageIO.framework */,
 				F8C7B19D205D46DAA5791688 /* AddressBook.framework */,
 				20B616F4A305436FAF79CF18 /* AddressBookUI.framework */,
+				14B7118AEC7349A29FF6713D /* Social.framework */,
+				5484B2E7E6F84AECB2D82409 /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,6 +292,8 @@
 				49170D8D3A0B4765B17E2008 /* CDVStatusBar.h */,
 				2BB9A0C918DB4E70A89D553D /* CDVGlobalization.m */,
 				11AAA6D1F30847F0960EF343 /* CDVGlobalization.h */,
+				E00A0175D41241849F7FA58A /* SocialSharing.m */,
+				4273195C3CCC4A60AD542205 /* SocialSharing.h */,
 			);
 			name = Plugins;
 			path = ShakeTonBDE/Plugins;
@@ -484,6 +497,7 @@
 				EA35C179DC854B44B9A8DE42 /* CDVContact.m in Sources */,
 				0F96A5338D794A81865DA287 /* CDVStatusBar.m in Sources */,
 				2F3A7A99186841A5810E045B /* CDVGlobalization.m in Sources */,
+				FCF8812093C24325B91F54BB /* SocialSharing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

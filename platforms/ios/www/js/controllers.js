@@ -76,6 +76,9 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
             makeInfoWindowEvent($scope.map, infowindow, marker);
           }
         });
+      })
+      .catch(function(e){
+        console.log(e);
       });
 
       $scope.map.setCenter(myPos);
@@ -119,14 +122,27 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 
 Shaketonbde.controller('CameraCtrl', function($scope) {
   function onSuccess(imageURI) {
-    console.log(imageURI);
     $scope.$apply(function() {
       $scope.imageURI = imageURI;
     });
+    $scope.shareFB = function() {
+      window.plugins.socialsharing.shareViaFacebook(
+        null,
+        null,
+        imageURI,
+        function() {
+          alert('share ok');
+        },
+        function(errormsg) {
+          alert(errormsg);
+        }
+      )
+    };
   }
 
   function onFail(message) {
-    window.alert('Failed because: ' + message);
+    alert('Erreur lors de la récupération de la photo');
+    console.log('Failed because: ' + message);
   }
 
   $scope.takePicture = function() {

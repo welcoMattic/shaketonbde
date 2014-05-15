@@ -125,6 +125,21 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
     $scope.$apply(function() {
       $scope.imageURI = imageURI;
     });
+    setTimeout(function() {
+      $scope.shareFB = function() {
+        window.plugins.socialsharing.shareViaFacebook(
+          null,
+          null,
+          imageURI,
+          function() {
+            alert('share ok');
+          },
+          function(errormsg) {
+            alert(errormsg);
+          }
+        )
+      };
+    }, 0);
   }
 
   function onFail(message) {

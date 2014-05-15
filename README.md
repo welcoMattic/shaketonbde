@@ -29,6 +29,8 @@ Install plugins :
 
 `$ cordova plugin add org.apache.cordova.globalization`
 
+`$ cordova plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git`
+
 ## How to build on CLI
 
 First time :
