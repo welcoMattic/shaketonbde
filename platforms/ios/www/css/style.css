@@ -86,15 +86,3 @@ h1.title.ng-binding {
   -webkit-animation: anim-rotate 1s infinite steps(12);
   animation: anim-rotate 1s infinite steps(12);
 }
-
-.contactShow .invisible {
-  visibility: visible;
-  z-index: 2;
-  position:static;
-  text-align: center;
-}
-
-.contactShow .contactButton {
-  width: 33%;
-  margin: auto;
-}

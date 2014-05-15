@@ -9,10 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"android-package\" value=\"com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
                             "count": 1
                         },
@@ -27,21 +23,23 @@
                         {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Globalization\"><param name=\"android-package\" value=\"org.apache.cordova.globalization.Globalization\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
             },
             "AndroidManifest.xml": {
                 "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ],
                     "/*": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
-                        },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
@@ -66,25 +64,19 @@
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
                             "count": 1
                         }
-                    ],
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
-                        }
                     ]
                 }
             }
         }
     },
     "installed_plugins": {
-        "com.danielcwilson.plugins.googleanalytics": {
-            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
-        },
         "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         },
         "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         },
         "org.apache.cordova.contacts": {
@@ -94,6 +86,12 @@
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         },
         "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
+        },
+        "org.apache.cordova.globalization": {
+            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
+        },
+        "org.apache.cordova.statusbar": {
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         }
     },

@@ -43,9 +43,13 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
     callback();
   }
 
+
   // Tooltip marker helper
+
+  // var marker = new google.map.Marker
+
   function makeInfoWindowEvent(map, infowindow, marker) {
-    window.google.maps.event.addListener(marker, 'click', function() {
+    window.google.maps.event.addListener(marker, 'touch', function() {
       infowindow.open(map, marker);
     });
   }
@@ -132,7 +136,7 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
             $scope.isImageURI = false;
           }
         });
-        $scope.share = function() {
+        $scope.sharePhoto = function() {
           window.plugins.socialsharing.share(
             null, null, imageURI, null,
             function() {
@@ -177,13 +181,23 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
             window.plugins.socialsharing.shareViaSMS(
                 'My cool message', '0650560218',
                 function(msg) {
-                    console.log('ok: ' + msg)
+                    console.log("ok");//window.location.replace('#/app/invite');
                 },
                 function(msg) {
-                    alert('error: ' + msg)
+                    console.log("error");//window.location.replace('#/app/invite');
                 }
             )
-        } else if (num == 2) {} else {
+        } else if (num == 2) {
+          window.plugins.socialsharing.share(
+                'Here my message;. Hey '+ contact.name +' !', 'Here the subject',
+                function(msg) {
+                    console.log("ok");
+                },
+                function(msg) {
+                    console.log("error");
+                }
+            )
+        } else {
 
         }
     };
