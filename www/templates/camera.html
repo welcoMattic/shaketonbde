@@ -3,7 +3,21 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <button ng-click="takePicture()" class="button button-block button-calm">Prendre une photo</button>
-    <img id="picture" src="{{imageURI}}">
+
+    <div class="list card" ng-show="isImageURI">
+      <div class="item item-body">
+        <img class="full-image" src="{{imageURI}}">
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#" ng-click="share()">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+    </div>
+
   </ion-content>
+  <div class="bar bar-footer bar-positive take-picture" ng-click="takePhoto()">
+    <div class="title"><i class="icon ion-camera"></i> Shoote tes potes</div>
+  </div>
 </ion-view>
