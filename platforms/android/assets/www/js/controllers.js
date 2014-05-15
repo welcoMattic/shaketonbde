@@ -122,22 +122,23 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 
 Shaketonbde.controller('CameraCtrl', function($scope) {
   function onSuccess(imageURI) {
-    $scope.$apply(function() {
-      $scope.imageURI = imageURI;
-    });
-    $scope.shareFB = function() {
-      window.plugins.socialsharing.shareViaFacebook(
-        null,
-        null,
-        imageURI,
-        function() {
-          alert('share ok');
-        },
-        function(errormsg) {
-          alert(errormsg);
-        }
-      )
-    };
+    setTimeout(function() {
+      $scope.$apply(function() {
+        $scope.imageURI = imageURI;
+      });
+      $scope.share = function() {
+        window.plugins.socialsharing.share(
+          null, null, imageURI, null,
+          function() {
+            window.location.replace('#/app/camera');
+          },
+          function(errormsg) {
+            console.log(errormsg);
+            window.location.replace('#/app/camera');
+          }
+        )
+      };
+    }, 0);
   }
 
   function onFail(message) {
