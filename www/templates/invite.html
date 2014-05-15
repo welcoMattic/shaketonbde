@@ -3,13 +3,13 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <div class="card">
-      <div class="item item-text-wrap" ng-repeat="contact in contacts | orderBy:'name'">
+    <ion-list class="list">
+      <ion-item ng-show="{{contact.email || contact.phoneNumber || contact.facebook}}" class="item item-text-wrap contactShow" ng-repeat="contact in contacts | orderBy:'name'">
         <p>Name : {{contact.name}}</p>
-        <p>Email : {{contact.email}}</p>
-        <p>Téléphone : {{contact.phoneNumber}}</p>
-        <p>Facebook : {{contact.facebook}}</p>
-      </div>
-    </div>
+        <ion-option-button class="button-calm contactButton" ng-show="{{contact.phoneNumber}}">SMS</ion-option-button>
+        <ion-option-button class="button-assertive contactButton" ng-show="{{contact.email}}">EMAIL</ion-option-button>
+        <!--<ion-option-button class="button-calm contactButton" ng-show="{{contact.facebook}}">FB</ion-option-button>-->
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
