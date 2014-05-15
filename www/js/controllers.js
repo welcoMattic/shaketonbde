@@ -43,9 +43,13 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
     callback();
   }
 
+
   // Tooltip marker helper
+
+  // var marker = new google.map.Marker
+
   function makeInfoWindowEvent(map, infowindow, marker) {
-    window.google.maps.event.addListener(marker, 'click', function() {
+    window.google.maps.event.addListener(marker, 'touch', function() {
       infowindow.open(map, marker);
     });
   }
@@ -132,7 +136,7 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
             $scope.isImageURI = false;
           }
         });
-        $scope.share = function() {
+        $scope.sharePhoto = function() {
           window.plugins.socialsharing.share(
             null, null, imageURI, null,
             function() {

@@ -132,7 +132,7 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
             $scope.isImageURI = false;
           }
         });
-        $scope.share = function() {
+        $scope.sharePhoto = function() {
           window.plugins.socialsharing.share(
             null, null, imageURI, null,
             function() {
