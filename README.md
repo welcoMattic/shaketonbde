@@ -5,11 +5,11 @@ Shake Ton BDE
 
 Require : Cordova CLI, Ionic CLI
 
-`$ sudo npm i -g cordova ionic gulp`
+`$ sudo npm install -g cordova ionic`
 
 Install dependencies
 
-`$ npm i`
+`$ npm install`
 
 Add platforms :
 
