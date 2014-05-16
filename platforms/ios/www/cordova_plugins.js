@@ -36,20 +36,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
-        "id": "org.apache.cordova.console.console",
-        "clobbers": [
-            "console"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.console/www/logger.js",
-        "id": "org.apache.cordova.console.logger",
-        "clobbers": [
-            "cordova.logger"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.contacts/www/contacts.js",
         "id": "org.apache.cordova.contacts.contacts",
         "clobbers": [
@@ -188,7 +174,6 @@ module.exports.metadata =
 {
     "nl.x-services.plugins.socialsharing": "4.0.8",
     "org.apache.cordova.camera": "0.2.9",
-    "org.apache.cordova.console": "0.2.8",
     "org.apache.cordova.contacts": "0.2.10",
     "org.apache.cordova.device": "0.2.9",
     "org.apache.cordova.geolocation": "0.3.7",

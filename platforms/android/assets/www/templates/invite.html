@@ -3,13 +3,16 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <ion-list class="list">
-      <ion-item ng-show="{{contact.name && contact.phoneNumber}}" class="item item-text-wrap contactShow" can-swipe="true" ng-repeat="contact in contacts | orderBy:'name'">
-        <p>{{contact.name}}</p>
-        <ion-option-button class="button-calm contactButton" ng-show="{{contact.phoneNumber}}" ng-click="invite(1, contact.phoneNumber)">SMS</ion-option-button>
-       <!-- <ion-option-button class="button-assertive contactButton" ng-show="{{contact.email}}" ng-click="invite(2)">EMAIL</ion-option-button>-->
-        <!--<ion-option-button class="button-calm contactButton" ng-show="{{contact.facebook}}">FB</ion-option-button>-->
-      </ion-item>
-    </ion-list>
+    <ul class="list">
+      <li ng-show="contact.name && contact.phoneNumber" class="item item-checkbox" ng-repeat="contact in contacts | orderBy:'name'">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="contact.checked">
+        </label>
+        {{contact.name}}
+      </li>
+      <button class="button button-full button-positive" ng-click="invite()" >
+        Inviter
+      </button>
+    </ul>
   </ion-content>
 </ion-view>
