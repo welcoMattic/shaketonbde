@@ -111,6 +111,8 @@
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.camera \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.contacts \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.device \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.globalization \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.statusbar \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/nl.x-services.plugins.socialsharing/www \
@@ -134,6 +136,11 @@
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/contacts.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/globalization.js \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.globalization/www/GlobalizationError.js \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/templates/camera.html \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/templates/event.html \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/assets/www/templates/events.html \

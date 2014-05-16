@@ -20,5 +20,8 @@
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager$3.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/contacts/ContactManager.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/globalization/Globalization$1.class \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/globalization/Globalization.class \
+/Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/classes/org/apache/cordova/globalization/GlobalizationError.class \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/dexedLibs/classes-a0a92eb0c2b38c61b2ebaffbc5ee8c71.jar \
 /Users/Valla/Documents/Travaux/IESA/B3DEV/PhoneGap/shaketonbde/platforms/android/ant-build/dexedLibs/libGoogleAnalyticsServices-5d9ebe6a85a89c9b35cb7acdeaf33a98.jar \
