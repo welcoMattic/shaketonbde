@@ -15,6 +15,7 @@ Shaketonbde.controller('AppCtrl', function($scope) {
 
 Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
   var markersArray = [];
+  var infoWindows = [];
 
   // Map washer
   var clearMap = function() {
@@ -44,8 +45,17 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
   };
 
   function makeInfoWindowEvent(map, infowindow, marker) {
-    window.google.maps.event.addListener(marker, 'mousedown', function() {
-      infowindow.open(map, marker);
+    window.google.maps.event.addListener(marker, 'click', function() {
+      angular.forEach(infoWindows, function(iw, key) {
+        iw.close();
+      });
+      infoWindows.push(infowindow.open(map, marker));
+    });
+    window.google.maps.event.addListener(marker, 'touch', function() {
+      angular.forEach(infoWindows, function(iw, key) {
+        iw.close();
+      });
+      infoWindows.push(infowindow.open(map, marker));
     });
   }
 
@@ -128,10 +138,7 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 
 Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
   $scope.takePhoto = function() {
-    Camera.getPicture({
-      quality: 20,
-      destinationType: Camera.DestinationType.FILE_URI
-    }).then(function(imageURI) {
+    Camera.getPicture().then(function(imageURI) {
       setTimeout(function() {
         $scope.$apply(function() {
           if(imageURI) {

@@ -22,7 +22,11 @@ Shaketonbde.factory('Camera', ['$q', function($q) {
         q.resolve(result);
       }, function(err) {
         q.reject(err);
-      }, options);
+      },
+      {
+        quality: 20,
+        destinationType: Camera.DestinationType.FILE_URI
+      });
       return q.promise;
     }
   }

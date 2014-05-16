@@ -13,6 +13,7 @@
 /workspace/shaketonbde/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
 /workspace/shaketonbde/platforms/android/assets/_where-is-www.txt \
 /workspace/shaketonbde/platforms/android/assets/www \
+/workspace/shaketonbde/platforms/android/assets/www/config.xml \
 /workspace/shaketonbde/platforms/android/assets/www/cordova.js \
 /workspace/shaketonbde/platforms/android/assets/www/cordova_plugins.js \
 /workspace/shaketonbde/platforms/android/assets/www/css \
