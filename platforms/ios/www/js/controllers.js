@@ -49,13 +49,13 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
       angular.forEach(infoWindows, function(iw, key) {
         iw.close();
       });
-      infoWindows.push(infowindow.open(map, marker));
+      infowindow.open(map, marker)
     });
     window.google.maps.event.addListener(marker, 'touch', function() {
       angular.forEach(infoWindows, function(iw, key) {
         iw.close();
       });
-      infoWindows.push(infowindow.open(map, marker));
+      infowindow.open(map, marker)
     });
   }
 
@@ -89,6 +89,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
           $scope.events.push(event);
           markersArray.push(marker);
           var infowindow = new window.google.maps.InfoWindow({ content: event.name });
+          infoWindows.push(infowindow);
           makeInfoWindowEvent($scope.map, infowindow, marker);
         });
       })
@@ -105,6 +106,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
       });
       markersArray.push(userMarker);
       var infowindow = new window.google.maps.InfoWindow({ content: 'You' });
+      infoWindows.push(infowindow);
       makeInfoWindowEvent($scope.map, infowindow, userMarker);
       $ionicLoading.hide();
     }, function(error) {
@@ -184,35 +186,25 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
       contact.phoneNumber = (c.phoneNumbers) ? c.phoneNumbers[0].value : '';
       contact.email = (c.emails) ? c.emails[0].value : '';
       contact.facebook = (c.ims) ? c.ims[0].value : '';
+      contact.checked = false;
       contacts.push(contact);
     });
     $scope.contacts = contacts;
     $ionicLoading.hide();
-    $scope.invite = function(num) {
-        console.log(num);
-        if (num == 1) {
-            window.plugins.socialsharing.shareViaSMS(
-                'My cool message', '0650560218',
-                function(msg) {
-                    console.log("ok");//window.location.replace('#/app/invite');
-                },
-                function(msg) {
-                    console.log("error");//window.location.replace('#/app/invite');
-                }
-            )
-        } else if (num == 2) {
-          window.plugins.socialsharing.share(
-                'Here my message;. Hey '+ contact.name +' !', 'Here the subject',
-                function(msg) {
-                    console.log("ok");
-                },
-                function(msg) {
-                    console.log("error");
-                }
-            )
-        } else {
-
-        }
+    $scope.invite = function() {
+      var selectedNumbers = $scope.contacts.filter(function(value) {
+          return value.checked;
+      });
+      var target = [];
+      angular.forEach(selectedNumbers, function(c) {
+        var dest = {};
+        dest.number = c.phoneNumber;
+        target.push(dest.number);
+      });
+      console.log(target);
+      window.plugins.socialsharing.shareViaSMS(
+        'Shake Ton BDE message', target
+      );
     };
   }
 
