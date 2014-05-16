@@ -11,3 +11,5 @@ Solutionné en déclarant via une Promise une variable globale dans l'objet wind
 Intégrer Google Analytics dans un environnement mobile
 Solutionné avec l'utilisation d'un module Angular (http://luisfarzati.github.io/angulartics/)
 
+### 4
+Mise en place de l'env de dev pour tous les membres de l'équipe
