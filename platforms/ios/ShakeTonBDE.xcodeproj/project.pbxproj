@@ -48,6 +48,11 @@
 		D4960C8D8C27471588F31C7C /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = E452B8C5B0564EBAA867365E /* CDVLocation.m */; };
 		1D4F39409DDC4C33B12DE6C7 /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE18D0E0D6042729B251234 /* CDVGlobalization.m */; };
 		F9B9A919A23D4BCA82FC8E88 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD6AF887265436F966D957B /* CDVStatusBar.m */; };
+		C3A68719F938498CA3F2471A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFC175C122C4211B5559BE2 /* Social.framework */; };
+		EB1B9F8A1DBD47AD95A70ADF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47ABFDBE2F44461A4B1581D /* MessageUI.framework */; };
+		BC875B41D36049F095868E46 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DD7431F31D43B6A95372ED /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E7E702A3A43A45F592C04A45 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1798205578334568AB3BB190 /* AddressBook.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7595106359C04D988ED691A7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695F531A7E73472392B854BD /* AddressBookUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +138,11 @@
 		0B36EB7344F649CABE0788A6 /* CDVGlobalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVGlobalization.h"; path = "org.apache.cordova.globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		1CD6AF887265436F966D957B /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "org.apache.cordova.statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		B3B3383E17584F3C850BC746 /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "org.apache.cordova.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		CFFC175C122C4211B5559BE2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		A47ABFDBE2F44461A4B1581D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		89DD7431F31D43B6A95372ED /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "ImageIO.framework"; path = "System/Library/Frameworks/ImageIO.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		1798205578334568AB3BB190 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AddressBook.framework"; path = "System/Library/Frameworks/AddressBook.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		695F531A7E73472392B854BD /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AddressBookUI.framework"; path = "System/Library/Frameworks/AddressBookUI.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +155,11 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
+				C3A68719F938498CA3F2471A /* Social.framework in Frameworks */,
+				EB1B9F8A1DBD47AD95A70ADF /* MessageUI.framework in Frameworks */,
+				BC875B41D36049F095868E46 /* ImageIO.framework in Frameworks */,
+				E7E702A3A43A45F592C04A45 /* AddressBook.framework in Frameworks */,
+				7595106359C04D988ED691A7 /* AddressBookUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +253,11 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
+				CFFC175C122C4211B5559BE2 /* Social.framework */,
+				A47ABFDBE2F44461A4B1581D /* MessageUI.framework */,
+				89DD7431F31D43B6A95372ED /* ImageIO.framework */,
+				1798205578334568AB3BB190 /* AddressBook.framework */,
+				695F531A7E73472392B854BD /* AddressBookUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
