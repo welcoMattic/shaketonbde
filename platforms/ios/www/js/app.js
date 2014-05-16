@@ -1,5 +1,5 @@
 'use strict';
-var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'angulartics', 'angulartics.google.analytics']);
+var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource']);
 
 Shaketonbde.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
