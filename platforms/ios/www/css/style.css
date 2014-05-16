@@ -22,6 +22,10 @@ h1.title.ng-binding {
   font-size: 22px;
 }
 
+.page-loader {
+  font-size: 40px !important;
+}
+
 @font-face {
   font-family: 'icomoon';
   src:url('http://s3.amazonaws.com/icomoonfonts/4/6/f.eot');

@@ -1,5 +1,5 @@
-events({
-    "1": {
+[{
+    "0": {
         "id": "1",
         "name": "American Party",
         "date": "2014-05-11,20:00",
@@ -20,12 +20,12 @@ events({
             "Entrée sur place : 15€ + 1 conso"
         ],
         "dressing": [
-            "2€- article",     
+            "2€- article",
             "3€- casque de moto, pas de musique BRA",
             "4€- ton gros sac de meuf bien lourd"
         ]
     },
-    "2": {
+    "1": {
         "id": "2",
         "name": "Throw your cat Party",
         "date": "2014-05-24,19:00",
@@ -52,4 +52,4 @@ events({
             "4€- ton gros sac de meuf bien lourd"
         ]
     }
-})
+}]

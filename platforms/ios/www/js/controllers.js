@@ -41,15 +41,10 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     $scope.map = map;
     callback();
-  }
-
-
-  // Tooltip marker helper
-
-  // var marker = new google.map.Marker
+  };
 
   function makeInfoWindowEvent(map, infowindow, marker) {
-    window.google.maps.event.addListener(marker, 'touch', function() {
+    window.google.maps.event.addListener(marker, 'mousedown', function() {
       infowindow.open(map, marker);
     });
   }
@@ -62,7 +57,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
     clearMap();
 
     $ionicLoading.show({
-      template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>'
+      template: '<i class="icon ion-loading-c page-loader"></i>'
     });
 
     navigator.geolocation.getCurrentPosition(function(pos) {
@@ -70,15 +65,21 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
           Events = new Event.query();
 
       Events.$promise.then(function(events) {
-        $scope.events = events;
-        angular.forEach($scope.events, function(event, key) {
-          if(key === event.id) {
-            var eventPosition = new window.google.maps.LatLng(event.coord.split(',')[0], event.coord.split(',')[1]);
-            var marker = new window.google.maps.Marker({ position: eventPosition, map: $scope.map });
-            markersArray.push(marker);
-            var infowindow = new window.google.maps.InfoWindow({ content: event.name });
-            makeInfoWindowEvent($scope.map, infowindow, marker);
-          }
+        $scope.events = [];
+        angular.forEach(events[0], function(event, key) {
+          var letterId = String.fromCharCode(96 + parseInt(event.id)).toUpperCase();
+          var eventPosition = new window.google.maps.LatLng(event.coord.split(',')[0], event.coord.split(',')[1]);
+          var icon = new google.maps.MarkerImage('http://maps.google.com/mapfiles/marker' + letterId + '.png', null, null, null, new google.maps.Size(20,34));
+          var marker = new window.google.maps.Marker({
+            position: eventPosition,
+            map: $scope.map,
+            icon: icon
+          });
+          event.letterId = letterId;
+          $scope.events.push(event);
+          markersArray.push(marker);
+          var infowindow = new window.google.maps.InfoWindow({ content: event.name });
+          makeInfoWindowEvent($scope.map, infowindow, marker);
         });
       })
       .catch(function(e){
@@ -86,12 +87,13 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
       });
 
       $scope.map.setCenter(myPos);
-      var userMarker = new window.google.maps.Marker({ position: myPos, map: $scope.map });
+      var icon = new google.maps.MarkerImage('http://maps.google.com/mapfiles/marker_green.png', null, null, null, new google.maps.Size(20,34));
+      var userMarker = new window.google.maps.Marker({
+        position: myPos,
+        map: $scope.map,
+        icon: icon
+      });
       markersArray.push(userMarker);
-      /**
-        TODO:
-        - replace by perso icon
-      **/
       var infowindow = new window.google.maps.InfoWindow({ content: 'You' });
       makeInfoWindowEvent($scope.map, infowindow, userMarker);
       $ionicLoading.hide();
@@ -112,7 +114,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
 Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
   Event.query().$promise.then(function(events) {
-    var event = events[$stateParams.eventId];
+    var event = events[0][$stateParams.eventId];
     event.date = new Date(event.date);
     $scope.event = event;
   });
@@ -126,7 +128,10 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 
 Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
   $scope.takePhoto = function() {
-    Camera.getPicture().then(function(imageURI) {
+    Camera.getPicture({
+      quality: 20,
+      destinationType: Camera.DestinationType.FILE_URI
+    }).then(function(imageURI) {
       setTimeout(function() {
         $scope.$apply(function() {
           if(imageURI) {
@@ -136,6 +141,7 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
             $scope.isImageURI = false;
           }
         });
+        // Scope function use to open native share action menu
         $scope.sharePhoto = function() {
           window.plugins.socialsharing.share(
             null, null, imageURI, null,
@@ -216,7 +222,7 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
     options.multiple = true;
     var fields = ['name', 'emails', 'ims', 'phoneNumbers'];
     $ionicLoading.show({
-      template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>'
+      template: '<i class="icon ion-loading-c page-loader"></i>'
     });
     navigator.contacts.find(fields, onSuccess, onError, options);
   } else {
