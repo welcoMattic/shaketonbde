@@ -1,13 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js",
-        "id": "com.danielcwilson.plugins.googleanalytics.UniversalAnalytics",
-        "clobbers": [
-            "analytics"
-        ]
-    },
-    {
         "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
         "id": "nl.x-services.plugins.socialsharing.SocialSharing",
         "clobbers": [
@@ -137,9 +130,9 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.danielcwilson.plugins.googleanalytics": "0.4.1",
     "nl.x-services.plugins.socialsharing": "4.0.8",
     "org.apache.cordova.camera": "0.2.9",
+    "org.apache.cordova.console": "0.2.8",
     "org.apache.cordova.contacts": "0.2.10",
     "org.apache.cordova.device": "0.2.9",
     "org.apache.cordova.geolocation": "0.3.7",

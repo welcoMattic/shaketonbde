@@ -6,16 +6,13 @@
     <ul class="list">
       <li ng-show="contact.name && contact.phoneNumber" class="item item-checkbox" ng-repeat="contact in contacts | orderBy:'name'">
         <label class="checkbox">
-          <input type="checkbox" ng-model="contact.name" ng-true-value="contact.phoneNumber" ng-false-value="">
-        <!--<ion-option-button class="button-calm contactButton" ng-show="{{contact.phoneNumber}}" ng-click="invite(1, contact.phoneNumber)">SMS</ion-option-button>-->
-        <!-- <ion-option-button class="button-assertive contactButton" ng-show="{{contact.email}}" ng-click="invite(2)">EMAIL</ion-option-button>-->
-        <!--<ion-option-button class="button-calm contactButton" ng-show="{{contact.facebook}}">FB</ion-option-button>-->
+          <input type="checkbox" ng-model="contact.checked">
         </label>
         {{contact.name}}
       </li>
+      <button class="button button-full button-positive" ng-click="invite()" >
+        Inviter
+      </button>
     </ul>
-    <button class="button button-positive" ng-click="invite()">
-      SMS
-    </button>
   </ion-content>
 </ion-view>

@@ -4,7 +4,7 @@ var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource']);
 Shaketonbde.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
-      StatusBar.styleDefault();
+      StatusBar.styleLightContent();
     }
   });
 });
@@ -66,7 +66,7 @@ Shaketonbde.config(function($stateProvider, $urlRouterProvider) {
         }
       }
     });
-  // if none of the above states are matched, use this as the fallback
+
   $urlRouterProvider.otherwise('/app/events');
 });
 
