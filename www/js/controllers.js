@@ -23,7 +23,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
       markersArray[i].setMap(null);
     }
     markersArray.length = 0;
-  }
+  };
 
   function initialize(callback) {
     var mapOptions = {
@@ -42,27 +42,25 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
     $scope.map = map;
     callback();
-  };
+  }
 
   function makeInfoWindowEvent(map, infowindow, marker) {
     window.google.maps.event.addListener(marker, 'click', function() {
-      angular.forEach(infoWindows, function(iw, key) {
+      angular.forEach(infoWindows, function(iw) {
         iw.close();
       });
-      infowindow.open(map, marker)
+      infowindow.open(map, marker);
     });
     window.google.maps.event.addListener(marker, 'touch', function() {
-      angular.forEach(infoWindows, function(iw, key) {
+      angular.forEach(infoWindows, function(iw) {
         iw.close();
       });
-      infowindow.open(map, marker)
+      infowindow.open(map, marker);
     });
   }
 
   $scope.centreOnMe = function() {
-    if(!$scope.map) {
-      return;
-    }
+    if(!$scope.map) { return; }
 
     clearMap();
 
@@ -76,8 +74,8 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
       Events.$promise.then(function(events) {
         $scope.events = [];
-        angular.forEach(events[0], function(event, key) {
-          var letterId = String.fromCharCode(96 + parseInt(event.id)).toUpperCase();
+        angular.forEach(events[0], function(event) {
+          var letterId = String.fromCharCode(97 + parseInt(event.id)).toUpperCase();
           var eventPosition = new window.google.maps.LatLng(event.coord.split(',')[0], event.coord.split(',')[1]);
           var icon = new google.maps.MarkerImage('http://maps.google.com/mapfiles/marker' + letterId + '.png', null, null, null, new google.maps.Size(20,34));
           var marker = new window.google.maps.Marker({
@@ -126,6 +124,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event) {
 
 Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
   Event.query().$promise.then(function(events) {
+    console.log($stateParams.eventId);
     var event = events[0][$stateParams.eventId];
     event.date = new Date(event.date);
     $scope.event = event;
@@ -161,7 +160,7 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
               console.log(errormsg);
               window.location.replace('#/app/camera');
             }
-          )
+          );
         };
       }, function(err) {
         console.log('Failed because: ' + err);
