@@ -2,6 +2,7 @@ node_modules/
 .idea
 *.sublime-*
 plugins/
+platforms/
 
 # Android
 platforms/android/assets/www

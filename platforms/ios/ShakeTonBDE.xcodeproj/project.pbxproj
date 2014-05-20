@@ -253,11 +253,8 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
-				8A8409A7187140BFBD6E3FED /* Social.framework */,
-				4F25784FC06E48868BA29C2A /* MessageUI.framework */,
-				1D6A38D26346416F8D10E54B /* ImageIO.framework */,
-				DA239C6EF1A2422E91E578BF /* AddressBook.framework */,
-				516254DAB31E492AB3E1284F /* AddressBookUI.framework */,
+				F1264977B86741249723A20D /* Social.framework */,
+				8153A495F56947D2AA63DC71 /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -273,27 +270,14 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				280AD3E4AA4049E7A8BAF90C /* SocialSharing.m */,
-				55C313700C724F85B1683338 /* SocialSharing.h */,
-				4359D443DEFF4EBAA8C62A53 /* CDVCamera.m */,
-				052E0102532746368261A574 /* CDVJpegHeaderWriter.m */,
-				72F1E1423A0A4556A0927D84 /* CDVCamera.h */,
-				0A1740BF87E94E1F850563C6 /* CDVJpegHeaderWriter.h */,
-				A53A19D352DE468389633D89 /* CDVExif.h */,
-				E067043BA13E4B8C96C1D272 /* CDVLogger.m */,
-				6BDE7D569D07435793137D8E /* CDVLogger.h */,
-				178270B1922443A9A2FF86C5 /* CDVContacts.m */,
-				2AC9A4705638478A80A9AE29 /* CDVContact.m */,
-				B8322A3739E0469292B8D8A6 /* CDVContacts.h */,
-				52D89E3C84BC450CAD3530A6 /* CDVContact.h */,
-				DB98D511113B43FFB045D918 /* CDVDevice.m */,
-				1A98C1C24003472EAC01B5A7 /* CDVDevice.h */,
-				19459370B4DF4B6A8916064B /* CDVLocation.m */,
-				4D214A74C29F4A8DB6D58E7D /* CDVLocation.h */,
-				0A832112CBB443E2919F432E /* CDVGlobalization.m */,
-				1D546D17207540449CF75AB4 /* CDVGlobalization.h */,
-				8392F0658E2A49EFB036C732 /* CDVStatusBar.m */,
-				67662DD945A84C99B064330E /* CDVStatusBar.h */,
+				FFC9F62566AD485D9618576E /* SocialSharing.m */,
+				B9146CC01C7844D7A3FE630E /* SocialSharing.h */,
+				F5955F17E61D4596B5277643 /* CDVLogger.m */,
+				DB46A81F7A714BC29663FB39 /* CDVLogger.h */,
+				18A1F20DFCCB4AC78CDC0305 /* CDVGlobalization.m */,
+				834F066E26974E1784C09C75 /* CDVGlobalization.h */,
+				7854393F7A02486F8D6DB043 /* CDVStatusBar.m */,
+				E1438056C60E4E448A530ED7 /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = "ShakeTonBDE/Plugins";
