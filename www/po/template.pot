@@ -1,7 +1,11 @@
 msgid ""
 msgstr ""
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: ShakeTonBDE\n"
+"Language: fr\n"
 
 #: /workspace/shaketonbde/www/templates/event.html
 msgid "Checkroom"
@@ -9,6 +13,27 @@ msgstr ""
 
 #: /workspace/shaketonbde/www/templates/event.html
 msgid "Drinks"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Find events"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Invite your friends!"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Menu"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/camera.html
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Shoot your friends!"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/event.html
+msgid "Tickets"
 msgstr ""
 
 #: /workspace/shaketonbde/www/templates/invite.html
@@ -27,18 +52,6 @@ msgstr ""
 msgid "Facebook:"
 msgstr ""
 
-#: /workspace/shaketonbde/www/templates/menu.html
-msgid "Find events"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/menu.html
-msgid "Invite your friends!"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/menu.html
-msgid "Menu"
-msgstr ""
-
 #: /workspace/shaketonbde/www/templates/invite.html
 msgid "Name:"
 msgstr ""
@@ -47,15 +60,7 @@ msgstr ""
 msgid "Phone:"
 msgstr ""
 
-#: /workspace/shaketonbde/www/templates/camera.html
-#: /workspace/shaketonbde/www/templates/menu.html
-msgid "Shoot your friends!"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/event.html
-msgid "Tickets"
-msgstr ""
-
 #: /workspace/shaketonbde/www/js/controllers.js
 msgid "You are invisible:"
 msgstr ""
+
