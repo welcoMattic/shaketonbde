@@ -28,10 +28,10 @@
     <feature name="Device">
       <param name="ios-package" value="CDVDevice" />
     </feature>
-    <feature name="SocialSharing">
-       <param name="ios-package" value="SocialSharing" />
+    <feature name="Globalization">
+      <param name="ios-package" value="CDVGlobalization" />
     </feature>
     <feature name="SocialSharing">
-      <param name="ios-package" value="SocialSharing" />
+       <param name="ios-package" value="SocialSharing" />
     </feature>
 </widget>

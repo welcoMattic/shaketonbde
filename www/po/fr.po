@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: ShakeTonBDE\n"
+"Language: fr\n"
+
+#: /workspace/shaketonbde/www/templates/event.html
+msgid "Checkroom"
+msgstr "Vestiaire"
+
+#: /workspace/shaketonbde/www/templates/event.html
+msgid "Drinks"
+msgstr "Boissons"
+
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Find events"
+msgstr "Trouver les soirées"
+
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Invite your friends!"
+msgstr "Invite tes potes !"
+
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Menu"
+msgstr "Menu"
+
+#: /workspace/shaketonbde/www/templates/camera.html
+#: /workspace/shaketonbde/www/templates/menu.html
+msgid "Shoot your friends!"
+msgstr "Shoote tes potes !"
+
+#: /workspace/shaketonbde/www/templates/event.html
+msgid "Tickets"
+msgstr "Entrées"
+
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Email:"
+msgstr "E-mail :"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Error during contacts fetching"
+msgstr "Erreur lors de la récupération des contacts"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Error during picture taking"
+msgstr "Erreur lors de la récupération de la photo"
+
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Facebook:"
+msgstr "Facebook :"
+
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Name:"
+msgstr "Nom :"
+
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Phone:"
+msgstr "Téléphone :"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "You are invisible:"
+msgstr "Impossible de te trouver"
+

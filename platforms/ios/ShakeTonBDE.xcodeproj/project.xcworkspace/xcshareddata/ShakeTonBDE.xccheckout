@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>52105BE0-EE5F-4A15-B7F5-58F81EAA8DB5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ShakeTonBDE</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>35D19A4A-3B1F-43E5-AADE-F781FA2621DE</key>
+		<string>ssh://github.com/welcoMattic/shaketonbde.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/ShakeTonBDE.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>35D19A4A-3B1F-43E5-AADE-F781FA2621DE</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/welcoMattic/shaketonbde.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>35D19A4A-3B1F-43E5-AADE-F781FA2621DE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>35D19A4A-3B1F-43E5-AADE-F781FA2621DE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>shaketonbde</string>
+		</dict>
+	</array>
+</dict>
+</plist>
