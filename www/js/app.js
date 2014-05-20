@@ -16,10 +16,11 @@ Shaketonbde.run(function($ionicPlatform, gettextCatalog) {
         gettextCatalog.currentLanguage = lang;
       },
       function() {
-        lang = 'fr';
+        gettextCatalog.currentLanguage = 'fr';
       }
     );
   }, 3000);
+  if(!ionic.Platform.isWebView()) gettextCatalog.currentLanguage = 'fr';
 });
 
 Shaketonbde.config(function($compileProvider){

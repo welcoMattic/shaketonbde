@@ -19,9 +19,9 @@ gulp.task('pot', function () {
 });
 
 gulp.task('translations', function () {
-  return gulp.src('www/po/**/*.po')
+  return gulp.src('www/po/*.po')
     .pipe(gettext.compile({
-      module: 'i18n',
+      module: 'Shaketonbde',
       format: 'javascript'
     }))
     .pipe(gulp.dest('www/js'));
