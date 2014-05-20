@@ -13,8 +13,17 @@ h1.title.ng-binding {
   right: 0 !important;
 }
 
-#picture {
+.take-picture {
+  height: 65px;
+}
 
+.take-picture .title {
+  line-height: 65px;
+  font-size: 22px;
+}
+
+.page-loader {
+  font-size: 40px !important;
 }
 
 @font-face {

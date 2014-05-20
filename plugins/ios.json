@@ -7,6 +7,18 @@
         "files": {
             "framework": {
                 "parents": {
+                    "Social.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "MessageUI.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
                     "ImageIO.framework": [
                         {
                             "xml": "true",
@@ -55,6 +67,10 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
                             "count": 1
                         },
@@ -96,6 +112,9 @@
         }
     },
     "installed_plugins": {
+        "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
+        },
         "org.apache.cordova.camera": {
             "PACKAGE_NAME": "com.iesamultimedia.shaketonbde"
         },

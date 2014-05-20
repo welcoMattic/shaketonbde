@@ -3,6 +3,7 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
+<<<<<<< HEAD
     <div class="card">
       <div class="item item-text-wrap" ng-repeat="contact in contacts | orderBy:'name'">
         <p><span translate>Name:</span> {{contact.name}}</p>
@@ -11,5 +12,18 @@
         <p><span translate>Facebook:</span> {{contact.facebook}}</p>
       </div>
     </div>
+=======
+    <ul class="list">
+      <li ng-show="contact.name && contact.phoneNumber" class="item item-checkbox" ng-repeat="contact in contacts | orderBy:'name'">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="contact.checked">
+        </label>
+        {{contact.name}}
+      </li>
+      <button class="button button-full button-positive" ng-click="invite()" >
+        Inviter
+      </button>
+    </ul>
+>>>>>>> e4d1652e76eda0617da16bdc7034dab9f01ec348
   </ion-content>
 </ion-view>

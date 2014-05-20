@@ -1,6 +1,13 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
+        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.camera/www/CameraConstants.js",
         "id": "org.apache.cordova.camera.Camera",
         "clobbers": [
@@ -123,6 +130,7 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
+    "nl.x-services.plugins.socialsharing": "4.0.8",
     "org.apache.cordova.camera": "0.2.9",
     "org.apache.cordova.console": "0.2.8",
     "org.apache.cordova.contacts": "0.2.10",

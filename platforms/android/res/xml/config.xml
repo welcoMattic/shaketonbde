@@ -39,4 +39,8 @@
         <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
         <param name="ios-package" value="CDVGlobalization" />
     </feature>
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+        <param name="ios-package" value="SocialSharing" />
+    </feature>
 </widget>
