@@ -6,7 +6,7 @@
         <h2>{{event.date | date :"dd MMMM yyyy @ HH'h'"}}</h2>
         <p>{{event.description}}</p>
         <p>
-          <h2>Entrées</h2>
+          <h2 translate>Tickets</h2>
           <ion-list>
             <ion-item ng-repeat="ticket in event.ticketing">
               {{ticket}}
@@ -14,7 +14,7 @@
           </ion-list>
         </p>
         <p>
-          <h2>Boissons</h2>
+          <h2 translate>Drinks</h2>
           <ion-list>
             <ion-item ng-repeat="drink in event.drinks">
               {{drink}}
@@ -22,7 +22,7 @@
           </ion-list>
         </p>
         <p>
-          <h2>Vestiaire</h2>
+          <h2 translate>Checkroom</h2>
           <ion-list>
             <ion-item ng-repeat="dressing in event.dressing">
               {{dressing}}

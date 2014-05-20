@@ -13,7 +13,7 @@ Shaketonbde.controller('AppCtrl', function($scope) {
 =            Events Controller           =
 ========================================*/
 
-Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event, $q) {
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, gettext) {
 
   function getLang() {
     var deferred = $q.defer();
@@ -121,7 +121,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, Event, $q) 
       makeInfoWindowEvent($scope.map, infowindow, userMarker);
       $ionicLoading.hide();
     }, function(error) {
-      window.alert('Impossible de te trouver: ' + error.message);
+      window.alert(gettext('You are invisible: ') + error.message);
     },
     { enableHighAccuracy: true });
   };
@@ -157,7 +157,7 @@ Shaketonbde.controller('CameraCtrl', function($scope) {
   }
 
   function onFail(message) {
-    alert('Erreur lors de la récupération de la photo');
+    alert(gettext('Error during picture taking'));
     console.log('Failed because: ' + message);
   }
 
@@ -196,7 +196,7 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
   }
 
   function onError(contactError) {
-    alert('Erreur lors du chargement des contacts');
+    alert(gettext('Error during contacts fetching'));
     console.log('onError ContactsLoad: ', contactError.code);
     $ionicLoading.hide();
   }

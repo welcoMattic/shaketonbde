@@ -5,10 +5,10 @@
   <ion-content class="has-header">
     <div class="card">
       <div class="item item-text-wrap" ng-repeat="contact in contacts | orderBy:'name'">
-        <p>Name : {{contact.name}}</p>
-        <p>Email : {{contact.email}}</p>
-        <p>Téléphone : {{contact.phoneNumber}}</p>
-        <p>Facebook : {{contact.facebook}}</p>
+        <p><span translate>Name:</span> {{contact.name}}</p>
+        <p><span translate>Email:</span> {{contact.email}}</p>
+        <p><span translate>Phone:</span> {{contact.phoneNumber}}</p>
+        <p><span translate>Facebook:</span> {{contact.facebook}}</p>
       </div>
     </div>
   </ion-content>

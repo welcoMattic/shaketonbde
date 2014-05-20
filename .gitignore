@@ -33,7 +33,6 @@ profile
 *.moved-aside
 IOS/www/
 
-
 # Emulator logs
 platforms/ios/cordova/console.log
 
