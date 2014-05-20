@@ -1,12 +1,25 @@
 'use strict';
-var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource']);
+var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext']);
 
-Shaketonbde.run(function($ionicPlatform) {
+Shaketonbde.run(function($ionicPlatform, gettextCatalog) {
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
       StatusBar.styleLightContent();
     }
   });
+  var lang;
+  setTimeout(function(){
+    navigator.globalization.getPreferredLanguage(
+      function(language) {
+        lang = language.value;
+        console.log('LANG : ',lang);
+        gettextCatalog.currentLanguage = lang;
+      },
+      function() {
+        lang = 'fr';
+      }
+    );
+  }, 3000);
 });
 
 Shaketonbde.config(function($compileProvider){

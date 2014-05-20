@@ -1,0 +1,3 @@
+angular.module('Shaketonbde').run(['gettextCatalog', function (gettextCatalog) {
+    gettextCatalog.setStrings('fr', {"Checkroom":"Vestiaire","Drinks":"Boissons","Email:":"E-mail :","Error during contacts fetching":"Erreur lors de la récupération des contacts","Error during picture taking":"Erreur lors de la récupération de la photo","Facebook:":"Facebook :","Find events":"Trouver les soirées","Invite your friends!":"Invite tes potes !","Menu":"Menu","Name:":"Nom :","Phone:":"Téléphone :","Shoot your friends!":"Shoote tes potes :","Tickets":"Entrées","You are invisible:":"Impossible de te trouver"});
+}]);

@@ -19,12 +19,12 @@ gulp.task('pot', function () {
 });
 
 gulp.task('translations', function () {
-  return gulp.src('po/**/*.po')
+  return gulp.src('www/po/**/*.po')
     .pipe(gettext.compile({
-      // options to pass to angular-gettext-tools...
-      format: 'json'
+      module: 'i18n',
+      format: 'javascript'
     }))
-    .pipe(gulp.dest('www/translations/'));
+    .pipe(gulp.dest('www/js'));
 });
 
 gulp.task('sass', function(done) {

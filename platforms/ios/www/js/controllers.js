@@ -166,29 +166,6 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
 =            Camera Controller            =
 =========================================*/
 
-<<<<<<< HEAD
-Shaketonbde.controller('CameraCtrl', function($scope) {
-  function onSuccess(imageURI) {
-    $scope.$apply(function() {
-      $scope.imageURI = imageURI;
-    });
-  }
-
-  function onFail(message) {
-    alert(gettext('Error during picture taking'));
-    console.log('Failed because: ' + message);
-  }
-
-  $scope.takePicture = function() {
-    navigator.camera.getPicture(
-      onSuccess,
-      onFail,
-      {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI
-      }
-    );
-=======
 Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
   $scope.takePhoto = function() {
     Camera.getPicture().then(function(imageURI) {
@@ -218,7 +195,6 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
         console.log('Failed because: ' + err);
       });
     }, 0);
->>>>>>> e4d1652e76eda0617da16bdc7034dab9f01ec348
   };
 });
 
