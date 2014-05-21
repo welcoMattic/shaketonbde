@@ -26,7 +26,7 @@ gulp.task('translations', function () {
       module: 'Shaketonbde',
       format: 'javascript'
     }))
-    .pipe(gulp.dest('www/js'));
+    .pipe(gulp.dest('www/js/translations'));
 });
 
 gulp.task('sass', function(done) {

@@ -90,3 +90,32 @@ h1.title.ng-binding {
   -webkit-animation: anim-rotate 1s infinite steps(12);
   animation: anim-rotate 1s infinite steps(12);
 }
+
+.menu.menu-left, .menu .scroll-content {
+    background: #444;
+}
+
+.menu .item, .menu .item .item-content {
+    background: #444;
+    color: #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-right: none;
+}
+
+.menu .item .item-content {
+  border-bottom: 1px solid #DDD;
+}
+
+.menu .item:last-child {
+  border-bottom: none;
+}
+
+.menu .item.active {
+    background: #222;
+}
+
+.bar-dark {
+  border-bottom: solid 1px rgba(17,17,17,.3) !important;
+}
