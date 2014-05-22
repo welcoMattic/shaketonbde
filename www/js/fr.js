@@ -1,4 +1,0 @@
-angular.module("Shaketonbde").run(['gettextCatalog', function (gettextCatalog) {
-    gettextCatalog.setStrings('fr', {"Checkroom":"Vestiaire","Drinks":"Boissons","Find events":"Trouver les soirées","Invite your friends!":"Invite tes potes !","Menu":"Menu","Shoot your friends!":"Shoote tes potes !","Tickets":"Entrées","Email:":"E-mail :","Error during contacts fetching":"Erreur lors de la récupération des contacts","Error during picture taking":"Erreur lors de la récupération de la photo","Facebook:":"Facebook :","Name:":"Nom :","Phone:":"Téléphone :","You are invisible:":"Impossible de te trouver"});
-
-}]);

@@ -4,7 +4,22 @@
 =            Menu Controller          =
 =====================================*/
 
-Shaketonbde.controller('AppCtrl', function($scope) {
+Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettextCatalog) {
+  $scope.openSettings = function() {
+   $ionicActionSheet.show({
+     buttons: [
+       { text: gettextCatalog.getString('French') },
+       { text: gettextCatalog.getString('English') },
+     ],
+     titleText: gettextCatalog.getString('Change language'),
+     cancelText: gettextCatalog.getString('Cancel'),
+     buttonClicked: function(index) {
+       if(index === 0) gettextCatalog.currentLanguage = 'fr';
+       if(index === 1) gettextCatalog.currentLanguage = 'en';
+       return true;
+     }
+   });
+ };
 });
 
 
@@ -13,36 +28,7 @@ Shaketonbde.controller('AppCtrl', function($scope) {
 =            Events Controller           =
 ========================================*/
 
-Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, gettext) {
-
-  function getLang() {
-    var deferred = $q.defer();
-    var lang;
-    function onSuccess(language) {
-      lang = language.value;
-      return lang;
-    }
-
-    function onError() {
-      return 'Error getting lang';
-    }
-
-    if (navigator.globalization) {
-      navigator.globalization.getPreferredLanguage(onSuccess, onError);
-      deferred.resolve(lang);
-    } else {
-      deferred.reject('Error getting lang (promise rejected)');
-    }
-
-    return deferred.promise;
-  }
-
-  getLang().then(function(r) {
-    console.log(r);
-  }).catch(function(e) {
-    console.log(e);
-  });
-
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event) {
   var markersArray = [];
   var infoWindows = [];
 
@@ -137,7 +123,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, 
       makeInfoWindowEvent($scope.map, infowindow, userMarker);
       $ionicLoading.hide();
     }, function(error) {
-      window.alert(gettext('You are invisible: ') + error.message);
+      window.alert(gettextCatalog.getString('You are invisible: ') + error.message);
     },
     { enableHighAccuracy: true });
   };
@@ -237,7 +223,7 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
   }
 
   function onError(contactError) {
-    alert(gettext('Error during contacts fetching'));
+    alert(gettextCatalog.getString('Error during contacts fetching'));
     console.log('onError ContactsLoad: ', contactError.code);
     $ionicLoading.hide();
   }

@@ -44,10 +44,6 @@ msgstr "E-mail :"
 msgid "Error during contacts fetching"
 msgstr "Erreur lors de la récupération des contacts"
 
-#: /workspace/shaketonbde/www/js/controllers.js
-msgid "Error during picture taking"
-msgstr "Erreur lors de la récupération de la photo"
-
 #: /workspace/shaketonbde/www/templates/invite.html
 msgid "Facebook:"
 msgstr "Facebook :"
@@ -63,4 +59,20 @@ msgstr "Téléphone :"
 #: /workspace/shaketonbde/www/js/controllers.js
 msgid "You are invisible:"
 msgstr "Impossible de te trouver"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Cancel"
+msgstr "Annuler"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Change language"
+msgstr "Changer de langue"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "English"
+msgstr "Anglais"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "French"
+msgstr "Français"
 
