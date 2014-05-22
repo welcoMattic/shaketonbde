@@ -4,15 +4,15 @@
 =            Menu Controller          =
 =====================================*/
 
-Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettext, gettextCatalog) {
+Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettextCatalog) {
   $scope.openSettings = function() {
    $ionicActionSheet.show({
      buttons: [
-       { text: gettext('French') },
-       { text: gettext('English') },
+       { text: gettextCatalog.getString('French') },
+       { text: gettextCatalog.getString('English') },
      ],
-     titleText: gettext('Change language'),
-     cancelText: gettext('Cancel'),
+     titleText: gettextCatalog.getString('Change language'),
+     cancelText: gettextCatalog.getString('Cancel'),
      buttonClicked: function(index) {
        if(index === 0) gettextCatalog.currentLanguage = 'fr';
        if(index === 1) gettextCatalog.currentLanguage = 'en';
@@ -28,7 +28,7 @@ Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettext, g
 =            Events Controller           =
 ========================================*/
 
-Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, gettext) {
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event) {
   var markersArray = [];
   var infoWindows = [];
 
@@ -123,7 +123,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, 
       makeInfoWindowEvent($scope.map, infowindow, userMarker);
       $ionicLoading.hide();
     }, function(error) {
-      window.alert(gettext('You are invisible: ') + error.message);
+      window.alert(gettextCatalog.getString('You are invisible: ') + error.message);
     },
     { enableHighAccuracy: true });
   };
@@ -137,12 +137,20 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, 
 =            Single Event Controller            =
 ===============================================*/
 
-Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
+Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event, $localstorage) {
   Event.query().$promise.then(function(events) {
     console.log($stateParams.eventId);
     var event = events[0][$stateParams.eventId];
     event.date = new Date(event.date);
     $scope.event = event;
+
+    window.localStorage.clear();
+    $scope.saveEvent = function() {
+      window.localStorage.setItem($scope.event.id, JSON.stringify($scope.event));
+      var eventSaved = window.localStorage.getItem($scope.event.id);
+      console.log(eventSaved);
+      console.log('1er event visualisé : '+window.localStorage.getItem(0)+' ; 2ème event visualisé : '+window.localStorage.getItem(1));
+    }
   });
 });
 
@@ -223,7 +231,7 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
   }
 
   function onError(contactError) {
-    alert(gettext('Error during contacts fetching'));
+    alert(gettextCatalog.getString('Error during contacts fetching'));
     console.log('onError ContactsLoad: ', contactError.code);
     $ionicLoading.hide();
   }
@@ -251,6 +259,4 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
       $scope.contacts.push(contact);
     });
   }
-
-
 });

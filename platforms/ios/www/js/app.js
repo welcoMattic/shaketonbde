@@ -1,5 +1,5 @@
 'use strict';
-var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext']);
+var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext', 'angulartics', 'angulartics.google.analytics.cordova']);
 
 Shaketonbde.run(function($ionicPlatform, gettextCatalog) {
   $ionicPlatform.ready(function() {
@@ -25,9 +25,23 @@ Shaketonbde.run(function($ionicPlatform, gettextCatalog) {
 
 Shaketonbde.config(function($compileProvider){
   $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
-})
+});
 
+/*======================================
+=      Localstorage Service            =
+======================================*/
 
+Shaketonbde.run(function($localstorage) {
+  $localstorage.set('name', 'Max');
+  console.log($localstorage.get('name'));
+  $localstorage.setObject('post', {
+    name: 'Thoughts',
+    text: 'Today was a good day'
+  });
+
+  var post = $localstorage.getObject('post');
+  console.log(post);
+});
 /*==============================
 =            Router            =
 ==============================*/
@@ -84,4 +98,3 @@ Shaketonbde.config(function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/app/events');
 });
-

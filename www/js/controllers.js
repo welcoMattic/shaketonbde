@@ -137,12 +137,21 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event) 
 =            Single Event Controller            =
 ===============================================*/
 
-Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event) {
+Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event, $localstorage) {
   Event.query().$promise.then(function(events) {
     console.log($stateParams.eventId);
     var event = events[0][$stateParams.eventId];
     event.date = new Date(event.date);
     $scope.event = event;
+
+    window.localStorage.clear();
+    $scope.saveEvent = function() {
+      window.localStorage.setItem($scope.event.id, JSON.stringify($scope.event));
+      var eventSaved = window.localStorage.getItem($scope.event.id);
+      //console.log(eventSaved);
+      console.log('1er event visualisé : '+window.localStorage.getItem(0));
+      console.log('2ème event visualisé : '+window.localStorage.getItem(1));
+    }
   });
 });
 
@@ -251,6 +260,4 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
       $scope.contacts.push(contact);
     });
   }
-
-
 });
