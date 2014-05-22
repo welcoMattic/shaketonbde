@@ -1,11 +1,15 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
-"Project-Id-Version: ShakeTonBDE\n"
-"Language: fr\n"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Cancel"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Change language"
+msgstr ""
 
 #: /workspace/shaketonbde/www/templates/event.html
 msgid "Checkroom"
@@ -15,8 +19,28 @@ msgstr ""
 msgid "Drinks"
 msgstr ""
 
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Email:"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "English"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Error during contacts fetching"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Facebook:"
+msgstr ""
+
 #: /workspace/shaketonbde/www/templates/menu.html
 msgid "Find events"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "French"
 msgstr ""
 
 #: /workspace/shaketonbde/www/templates/menu.html
@@ -25,6 +49,14 @@ msgstr ""
 
 #: /workspace/shaketonbde/www/templates/menu.html
 msgid "Menu"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Name:"
+msgstr ""
+
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid "Phone:"
 msgstr ""
 
 #: /workspace/shaketonbde/www/templates/camera.html
@@ -36,31 +68,6 @@ msgstr ""
 msgid "Tickets"
 msgstr ""
 
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Email:"
-msgstr ""
-
-#: /workspace/shaketonbde/www/js/controllers.js
-msgid "Error during contacts fetching"
-msgstr ""
-
-#: /workspace/shaketonbde/www/js/controllers.js
-msgid "Error during picture taking"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Facebook:"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Name:"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Phone:"
-msgstr ""
-
 #: /workspace/shaketonbde/www/js/controllers.js
 msgid "You are invisible:"
 msgstr ""
-
