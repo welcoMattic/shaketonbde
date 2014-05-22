@@ -22,6 +22,7 @@ Shaketonbde.run(function($ionicPlatform, gettextCatalog, gettext) {
         gettextCatalog.currentLanguage = 'fr';
       }
     );
+    // connection detection
     if(ionic.Platform.isWebView()) {
       var networkState = navigator.connection.type;
       var states = {};
