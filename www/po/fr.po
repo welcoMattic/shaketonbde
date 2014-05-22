@@ -90,7 +90,7 @@ msgstr "Connexion 4G"
 
 #: /workspace/shaketonbde/www/js/app.js
 msgid "Cell generic connection"
-msgstr "Connexion GPRS"
+msgstr "Connexion générique"
 
 #: /workspace/shaketonbde/www/js/app.js
 msgid "Ethernet connection"

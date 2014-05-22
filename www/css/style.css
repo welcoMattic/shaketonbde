@@ -91,7 +91,7 @@ h1.title.ng-binding {
   animation: anim-rotate 1s infinite steps(12);
 }
 
-.menu.menu-left, .menu .scroll-content {
+.menu.menu-left, .menu .scroll-content, .menu .scroll {
     background: #444;
 }
 

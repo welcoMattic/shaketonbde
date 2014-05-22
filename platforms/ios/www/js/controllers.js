@@ -1,18 +1,18 @@
-'use strict';
+// 'use strict';
 
 /*=====================================
 =            Menu Controller          =
 =====================================*/
 
-Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettext, gettextCatalog) {
+Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettextCatalog, gettext) {
   $scope.openSettings = function() {
    $ionicActionSheet.show({
      buttons: [
-       { text: gettext('French') },
-       { text: gettext('English') },
+       { text: gettextCatalog.getString(gettext('French')) },
+       { text: gettextCatalog.getString(gettext('English')) },
      ],
-     titleText: gettext('Change language'),
-     cancelText: gettext('Cancel'),
+     titleText: gettextCatalog.getString(gettext('Change language')),
+     cancelText: gettextCatalog.getString(gettext('Cancel')),
      buttonClicked: function(index) {
        if(index === 0) gettextCatalog.currentLanguage = 'fr';
        if(index === 1) gettextCatalog.currentLanguage = 'en';
@@ -28,7 +28,7 @@ Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettext, g
 =            Events Controller           =
 ========================================*/
 
-Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, gettext) {
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, gettext, gettextCatalog) {
   var markersArray = [];
   var infoWindows = [];
 
@@ -40,95 +40,99 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $q, Event, 
     markersArray.length = 0;
   };
 
-  function initialize(callback) {
-    var mapOptions = {
-          center: new window.google.maps.LatLng(48.8588589,2.3470599),
-          zoom: 12,
-          mapTypeId: window.google.maps.MapTypeId.ROADMAP,
-        },
-        map = new window.google.maps.Map(document.getElementById('map'), mapOptions);
+  if(window.connected) {
 
-    window.google.maps.event.addDomListener(document.getElementById('map'), 'mousedown',
-      function(e) {
-        e.preventDefault();
-        return false;
-      }
-    );
+    function initialize(callback) {
+      var mapOptions = {
+            center: new window.google.maps.LatLng(48.8588589,2.3470599),
+            zoom: 12,
+            mapTypeId: window.google.maps.MapTypeId.ROADMAP,
+          },
+          map = new window.google.maps.Map(document.getElementById('map'), mapOptions);
 
-    $scope.map = map;
-    callback();
-  }
+      window.google.maps.event.addDomListener(document.getElementById('map'), 'mousedown',
+        function(e) {
+          e.preventDefault();
+          return false;
+        }
+      );
 
-  function makeInfoWindowEvent(map, infowindow, marker) {
-    window.google.maps.event.addListener(marker, 'click', function() {
-      angular.forEach(infoWindows, function(iw) {
-        iw.close();
-      });
-      infowindow.open(map, marker);
-    });
-    window.google.maps.event.addListener(marker, 'touch', function() {
-      angular.forEach(infoWindows, function(iw) {
-        iw.close();
-      });
-      infowindow.open(map, marker);
-    });
-  }
+      $scope.map = map;
+      callback();
+    }
 
-  $scope.centreOnMe = function() {
-    if(!$scope.map) { return; }
-
-    clearMap();
-
-    $ionicLoading.show({
-      template: '<i class="icon ion-loading-c page-loader"></i>'
-    });
-
-    navigator.geolocation.getCurrentPosition(function(pos) {
-      var myPos = new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-          Events = new Event.query();
-
-      Events.$promise.then(function(events) {
-        $scope.events = [];
-        angular.forEach(events[0], function(event) {
-          var letterId = String.fromCharCode(97 + parseInt(event.id)).toUpperCase();
-          var eventPosition = new window.google.maps.LatLng(event.coord.split(',')[0], event.coord.split(',')[1]);
-          var icon = new google.maps.MarkerImage('http://maps.google.com/mapfiles/marker' + letterId + '.png', null, null, null, new google.maps.Size(20,34));
-          var marker = new window.google.maps.Marker({
-            position: eventPosition,
-            map: $scope.map,
-            icon: icon
-          });
-          event.letterId = letterId;
-          $scope.events.push(event);
-          markersArray.push(marker);
-          var infowindow = new window.google.maps.InfoWindow({ content: event.name });
-          infoWindows.push(infowindow);
-          makeInfoWindowEvent($scope.map, infowindow, marker);
+    function makeInfoWindowEvent(map, infowindow, marker) {
+      window.google.maps.event.addListener(marker, 'click', function() {
+        angular.forEach(infoWindows, function(iw) {
+          iw.close();
         });
-      })
-      .catch(function(e){
-        console.log(e);
+        infowindow.open(map, marker);
+      });
+      window.google.maps.event.addListener(marker, 'touch', function() {
+        angular.forEach(infoWindows, function(iw) {
+          iw.close();
+        });
+        infowindow.open(map, marker);
+      });
+    }
+
+    $scope.centreOnMe = function() {
+      if(!$scope.map) { return; }
+
+      clearMap();
+
+      $ionicLoading.show({
+        template: '<i class="icon ion-loading-c page-loader"></i>'
       });
 
-      $scope.map.setCenter(myPos);
-      var icon = new google.maps.MarkerImage('http://maps.google.com/mapfiles/marker_green.png', null, null, null, new google.maps.Size(20,34));
-      var userMarker = new window.google.maps.Marker({
-        position: myPos,
-        map: $scope.map,
-        icon: icon
-      });
-      markersArray.push(userMarker);
-      var infowindow = new window.google.maps.InfoWindow({ content: 'You' });
-      infoWindows.push(infowindow);
-      makeInfoWindowEvent($scope.map, infowindow, userMarker);
-      $ionicLoading.hide();
-    }, function(error) {
-      window.alert(gettext('You are invisible: ') + error.message);
-    },
-    { enableHighAccuracy: true });
-  };
+      navigator.geolocation.getCurrentPosition(function(pos) {
+        var myPos = new window.google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+            Events = new Event.query();
 
-  window.google.maps.event.addDomListener(window, 'load', initialize($scope.centreOnMe));
+        Events.$promise.then(function(events) {
+          $scope.events = [];
+          angular.forEach(events[0], function(event) {
+            var letterId = String.fromCharCode(97 + parseInt(event.id)).toUpperCase();
+            var eventPosition = new window.google.maps.LatLng(event.coord.split(',')[0], event.coord.split(',')[1]);
+            var icon = new google.maps.MarkerImage('http://maps.google.com/mapfiles/marker' + letterId + '.png', null, null, null, new google.maps.Size(20,34));
+            var marker = new window.google.maps.Marker({
+              position: eventPosition,
+              map: $scope.map,
+              icon: icon
+            });
+            event.letterId = letterId;
+            $scope.events.push(event);
+            markersArray.push(marker);
+            var infowindow = new window.google.maps.InfoWindow({ content: event.name });
+            infoWindows.push(infowindow);
+            makeInfoWindowEvent($scope.map, infowindow, marker);
+          });
+        })
+        .catch(function(e){
+          console.log(e);
+        });
+
+        $scope.map.setCenter(myPos);
+        var icon = new google.maps.MarkerImage('http://maps.google.com/mapfiles/marker_green.png', null, null, null, new google.maps.Size(20,34));
+        var userMarker = new window.google.maps.Marker({
+          position: myPos,
+          map: $scope.map,
+          icon: icon
+        });
+        markersArray.push(userMarker);
+        var infowindow = new window.google.maps.InfoWindow({ content: 'You' });
+        infoWindows.push(infowindow);
+        makeInfoWindowEvent($scope.map, infowindow, userMarker);
+        $ionicLoading.hide();
+      }, function(error) {
+        navigator.notification.alert(gettextCatalog.getString(gettext('You are invisible: ')) + error.message, function(){}, 'Shake Ton BDE', 'Ok');
+      },
+      { enableHighAccuracy: true });
+    };
+    window.google.maps.event.addDomListener(window, 'load', initialize($scope.centreOnMe));
+
+  }
+
 });
 
 
@@ -190,7 +194,7 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
 =            Invite Controller            =
 =========================================*/
 
-Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
+Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading, gettext, gettextCatalog) {
 
   function onSuccess(data) {
     var contacts = [];
@@ -223,7 +227,7 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
   }
 
   function onError(contactError) {
-    alert(gettext('Error during contacts fetching'));
+    navigator.notification.alert(gettextCatalog.getString(gettext('Error during contacts fetching')), function(){}, 'Shake Ton BDE', 'Ok');
     console.log('onError ContactsLoad: ', contactError.code);
     $ionicLoading.hide();
   }

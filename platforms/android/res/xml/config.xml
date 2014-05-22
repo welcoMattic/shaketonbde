@@ -4,6 +4,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
     <name>ShakeTonBDE</name>
     <description>
       L'appli pour ne plus rater les soirées de ton BDE
@@ -40,5 +43,13 @@
     </feature>
     <feature name="SocialSharing">
         <param name="ios-package" value="SocialSharing" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+        <param name="ios-package" value="CDVNotification" />
     </feature>
 </widget>
