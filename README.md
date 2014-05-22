@@ -33,6 +33,12 @@ Install plugins :
 
 `$ cordova plugin add org.apache.cordova.statusbar`
 
+`$ cordova plugin add org.apache.cordova.network-information`
+
+`$ cordova plugin add org.apache.cordova.vibration`
+
+`$ cordova plugin add org.apache.cordova.dialogs`
+
 ## How to build on CLI
 
 First time :

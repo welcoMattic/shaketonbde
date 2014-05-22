@@ -7,6 +7,22 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell 2G connection"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell 3G connection"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell 4G connection"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell generic connection"
+msgstr ""
+
 #: /workspace/shaketonbde/www/js/controllers.js
 msgid "Change language"
 msgstr ""
@@ -29,6 +45,10 @@ msgstr ""
 
 #: /workspace/shaketonbde/www/js/controllers.js
 msgid "Error during contacts fetching"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Ethernet connection"
 msgstr ""
 
 #: /workspace/shaketonbde/www/templates/invite.html
@@ -55,6 +75,10 @@ msgstr ""
 msgid "Name:"
 msgstr ""
 
+#: /workspace/shaketonbde/www/js/app.js
+msgid "No network connection"
+msgstr ""
+
 #: /workspace/shaketonbde/www/templates/invite.html
 msgid "Phone:"
 msgstr ""
@@ -66,6 +90,14 @@ msgstr ""
 
 #: /workspace/shaketonbde/www/templates/event.html
 msgid "Tickets"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Unknown connection"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "WiFi connection"
 msgstr ""
 
 #: /workspace/shaketonbde/www/js/controllers.js

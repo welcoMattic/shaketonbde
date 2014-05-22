@@ -24,6 +24,9 @@
     </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
+    <feature name="Vibration">
+        <param name="ios-package" value="CDVVibration" />
+    </feature>
     <name>ShakeTonBDE</name>
     <description>
       L'appli pour ne plus rater les soirées de ton BDE
@@ -57,5 +60,11 @@
     </feature>
     <feature name="SocialSharing">
         <param name="ios-package" value="SocialSharing" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
     </feature>
 </widget>

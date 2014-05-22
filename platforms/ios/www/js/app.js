@@ -1,26 +1,50 @@
 'use strict';
 var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext']);
 
-Shaketonbde.run(function($ionicPlatform, gettextCatalog) {
+Shaketonbde.run(function($ionicPlatform, gettextCatalog, gettext) {
+  // Init statusbar
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
       StatusBar.styleLightContent();
     }
   });
+
+  // Init language & connection type
   var lang;
+  var connected = false;
   setTimeout(function(){
     navigator.globalization.getPreferredLanguage(
       function(language) {
         lang = language.value;
-        console.log('LANG : ',lang);
         gettextCatalog.currentLanguage = lang;
       },
       function() {
         gettextCatalog.currentLanguage = 'fr';
       }
     );
+    if(ionic.Platform.isWebView()) {
+      var networkState = navigator.connection.type;
+      var states = {};
+      states[Connection.UNKNOWN]  = gettextCatalog.getString(gettext('Unknown connection'));
+      states[Connection.ETHERNET] = gettextCatalog.getString(gettext('Ethernet connection'));
+      states[Connection.WIFI]     = gettextCatalog.getString(gettext('WiFi connection'));
+      states[Connection.CELL_2G]  = gettextCatalog.getString(gettext('Cell 2G connection'));
+      states[Connection.CELL_3G]  = gettextCatalog.getString(gettext('Cell 3G connection'));
+      states[Connection.CELL_4G]  = gettextCatalog.getString(gettext('Cell 4G connection'));
+      states[Connection.CELL]     = gettextCatalog.getString(gettext('Cell generic connection'));
+      states[Connection.NONE]     = gettextCatalog.getString(gettext('No network connection'));
+
+      if(states[networkState] !== Connection.NONE) {
+        connected = true;
+      }
+
+      navigator.notification.alert(states[networkState], function(){}, 'Shake Ton BDE', 'Ok');
+      navigator.notification.vibrate();
+    }
   }, 3000);
+  // Exception for desktop browsers
   if(!ionic.Platform.isWebView()) gettextCatalog.currentLanguage = 'fr';
+  window.connected = connected;
 });
 
 Shaketonbde.config(function($compileProvider){
