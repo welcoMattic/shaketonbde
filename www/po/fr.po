@@ -76,3 +76,35 @@ msgstr "Anglais"
 msgid "French"
 msgstr "Français"
 
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell 2G connection"
+msgstr "Connexion Edge"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell 3G connection"
+msgstr "Connexion 3G"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell 4G connection"
+msgstr "Connexion 4G"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Cell generic connection"
+msgstr "Connexion GPRS"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Ethernet connection"
+msgstr "Connexion Ethernet"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "No network connection"
+msgstr "Pas de connexion"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Unknown connection"
+msgstr "Connexion inconnue"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "WiFi connection"
+msgstr "Connexion WiFi"
+
