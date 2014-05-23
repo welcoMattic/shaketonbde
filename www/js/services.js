@@ -50,7 +50,7 @@ Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', fun
     var q = $q.defer();
     $ionicPlatform.ready(function () {
       if(navigator.connection) {
-        promiseCompleted = true;
+        q.resolve(navigator.connection);
       } else {
         q.reject('navigator.connection is not defined');
       }
