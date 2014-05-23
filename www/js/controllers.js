@@ -179,6 +179,7 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
               window.location.replace('#/app/camera');
             },
             function(errormsg) {
+              console.log(errormsg);
               window.location.replace('#/app/camera');
             }
           );
@@ -211,36 +212,42 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading) {
     });
     $scope.contacts = contacts;
     $ionicLoading.hide();
+
     $scope.invite = function() {
-      var selectedNumbers = $scope.contacts.filter(function(value) {
-          return value.checked;
+      var selectedNumbers = $scope.contacts.filter(function(contact) {
+        return contact.checked;
       });
       var target = [];
       angular.forEach(selectedNumbers, function(c) {
-        var dest = {};
-        dest.number = c.phoneNumber;
-        target.push(dest.number);
+        target.push(c.phoneNumber);
       });
-      console.log(target);
+      var targetString = target.reduce(function(previousValue, currentValue, index, array) {
+        return previousValue + ',' + currentValue;
+      });
+      console.log(targetString);
       window.plugins.socialsharing.shareViaSMS(
-        'Shake Ton BDE message', target
+        'Shake Ton BDE message', targetString
       );
     };
   }
 
   function onError(contactError) {
-    navigator.notification.alert(gettextCatalog.getString(gettext('Error during contacts fetching')), function(){}, 'Shake Ton BDE', 'Ok');
-    console.log('onError ContactsLoad: ', contactError.code);
-    $ionicLoading.hide();
+    navigator.notification.alert(
+      gettextCatalog.getString(gettext('Error during contacts fetching')),
+      function(){
+        $ionicLoading.hide()
+      },
+      'Shake Ton BDE',
+      'Ok'
+    );
   }
 
   var options = new ContactFindOptions();
   options.filter = '';
   options.multiple = true;
   var fields = ['name', 'emails', 'ims', 'phoneNumbers'];
-  $ionicLoading.show({
-    template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>'
-  });
+  $ionicLoading.show({ template: '<div class="spinner icon-spinner-3" aria-hidden="true"></div>' });
+
   navigator.contacts.find(fields, onSuccess, onError, options);
 
 });
