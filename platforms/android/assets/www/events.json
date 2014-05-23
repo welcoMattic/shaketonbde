@@ -1,55 +1,0 @@
-[{
-    "0": {
-        "id": "0",
-        "name": "American Party",
-        "date": "2014-05-11,20:00",
-        "coord": "48.8615679,2.3217371",
-        "location_name": "Concorde Atlantique",
-        "description": "1/ Tu viendras habillé en joueur de foot us - en supporter (ou joueurs) des Nets - en cheerleader - en superman - en coyote girl - en donuts, en brooklyn bridge, en statut de la liberté si l'envie t'en prend. 2/ Tu laisses ton cerveau à l'entrée. 3/ Tu prépares ta CB. 4/ Tu fait preuves d'imagination quant à ta tenue de Kainri. 5/ Tu fais attention à tes copain(e)s. 6/ Tu ne ramènes pas de substances illicites. L'alcool te suffira à rester éveillé toute la soirée, nuit, matin... 7/ Tu feras un gros bisous à #MAXIME, qui s'en va, et pour ça on lui fera un gros BIGUP pour son départ en Chine, préparez vos plus beaux bisous. 8/ OURPARTY te réserve encore quelques surprises pour cette folle soirée. 9/ Tu viens avec ta putain de bonne humeur.",
-        "drinks": [
-            "2€ le soft",
-            "4€ la pinte de bière (avant 23h)",
-            "6€ la pinte de bière (après 23h)",
-            "5€ le hard",
-            "7€ la coupe de champagne",
-            "Bouteille: 80 € (alcool) & 70€ (Mousseux)"
-        ],
-        "ticketing": [
-            "Entrée en prévente : 10€ + 1 conso à retirer auprès de @Braxton Miatetima",
-            "Entrée prévente en ligne : 10,99€",
-            "Entrée sur place : 15€ + 1 conso"
-        ],
-        "dressing": [
-            "2€- article",
-            "3€- casque de moto, pas de musique BRA",
-            "4€- ton gros sac de meuf bien lourd"
-        ]
-    },
-    "1": {
-        "id": "1",
-        "name": "Throw your cat Party",
-        "date": "2014-05-24,19:00",
-        "coord": "48.8634916,2.3274943",
-        "location_name": "Jardin des Tuileries",
-        "description": "1/ Un chat tu amèneras., ou sinon cher tu le paieras 2/ Tu laisses tes états d'âme à l'entrée. 3/ Tu prépares ta CB. 4/ Tu fait preuves d'imagination quant aux épices choisis 5/ Tu fais attention à tes copain(e)s. 6/ Tu ne ramènes pas de substances illicites. L'alcool te suffira à rester éveillé toute la soirée, nuit, matin... 7/ OURPARTY te réserve encore quelques surprises pour cette folle soirée. 9/ Tu viens avec ta putain de bonne humeur.",
-        "drinks": [
-            "2€ le soft",
-            "4€ la pinte de bière (avant 23h)",
-            "6€ la pinte de bière (après 23h)",
-            "5€ le hard",
-            "7€ la coupe de champagne",
-            "Bouteille: 80 € (alcool) & 70€ (Mousseux)"
-        ],
-        "ticketing": [
-            "Entrée en prévente : 10€ + 1 conso à retirer auprès de @Braxton Miatetima",
-            "Entrée prévente en ligne : 10,99€",
-            "Entrée sur place : 15€ + 1 conso",
-            "Achat d'un chat : 30€ à 60€"
-        ],
-        "dressing": [
-            "2€/ article",
-            "3€/ casque de moto, pas de musique BRA",
-            "4€/ ton gros sac de meuf bien lourd"
-        ]
-    }
-}]

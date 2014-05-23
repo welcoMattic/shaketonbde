@@ -16,7 +16,7 @@ Shaketonbde.factory('Event', ['$resource',
 
 Shaketonbde.factory('Camera', ['$q', function($q) {
   return {
-    getPicture: function(options) {
+    getPicture: function() {
       var q = $q.defer();
       navigator.camera.getPicture(function(result) {
         q.resolve(result);
@@ -29,5 +29,67 @@ Shaketonbde.factory('Camera', ['$q', function($q) {
       });
       return q.promise;
     }
-  }
+  };
 }]);
+
+
+Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', function($rootScope, $ionicPlatform, $q) {
+  // Get Cordova's global Connection object or emulate a smilar one
+  var Connection = window.Connection || {
+    'ETHERNET' : 'ethernet',
+    'WIFI'     : 'wifi',
+    'CELL_2G'  : 'cell_2g',
+    'CELL_3G'  : 'cell_3g',
+    'CELL_4G'  : 'cell_4g',
+    'CELL'     : 'cell',
+    'EDGE'     : 'edge',
+    'UNKNOWN'  : 'unknown'
+  };
+
+  // These services are written with full Ionic Framework integration.
+  $ionicPlatform.ready(function () {
+    document.addEventListener('offline', function () {
+      $rootScope.$broadcast('Cordova.NetworkStatus.Offline');
+    }, false);
+    document.addEventListener('online', function () {
+      $rootScope.$broadcast('Cordova.NetworkStatus.Online');
+    }, false);
+  });
+
+  var asyncGetConnection = function () {
+    var q = $q.defer();
+    var promiseCompleted = false;
+    $ionicPlatform.ready(function () {
+      if(navigator.connection) {
+        q.resolve(navigator.connection);
+        promiseCompleted = true;
+      } else {
+        q.reject('navigator.connection is not defined');
+      }
+    });
+    return q.promise;
+  };
+
+  return {
+    isOnline: function () {
+      return asyncGetConnection().then(function(networkConnection) {
+        var isConnected = false;
+
+        switch (networkConnection.type) {
+          case Connection.ETHERNET:
+          case Connection.WIFI:
+          case Connection.CELL_2G:
+          case Connection.CELL_3G:
+          case Connection.CELL_4G:
+          case Connection.CELL:
+            console.log(Connection.WIFI);
+            console.log(networkConnection.type);
+            isConnected = true;
+            break;
+        }
+        return isConnected;
+      });
+    }
+  };
+}]);
+
