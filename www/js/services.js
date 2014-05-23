@@ -46,22 +46,10 @@ Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', fun
     'UNKNOWN'  : 'unknown'
   };
 
-  // These services are written with full Ionic Framework integration.
-  $ionicPlatform.ready(function () {
-    document.addEventListener('offline', function () {
-      $rootScope.$broadcast('Cordova.NetworkStatus.Offline');
-    }, false);
-    document.addEventListener('online', function () {
-      $rootScope.$broadcast('Cordova.NetworkStatus.Online');
-    }, false);
-  });
-
   var asyncGetConnection = function () {
     var q = $q.defer();
-    var promiseCompleted = false;
     $ionicPlatform.ready(function () {
       if(navigator.connection) {
-        q.resolve(navigator.connection);
         promiseCompleted = true;
       } else {
         q.reject('navigator.connection is not defined');
@@ -82,8 +70,6 @@ Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', fun
           case Connection.CELL_3G:
           case Connection.CELL_4G:
           case Connection.CELL:
-            console.log(Connection.WIFI);
-            console.log(networkConnection.type);
             isConnected = true;
             break;
         }
