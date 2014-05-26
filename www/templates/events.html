@@ -7,6 +7,15 @@
     <button class="button button-icon icon ion-location" ng-click="centreOnMe()"></button>
   </ion-nav-buttons>
   <ion-content class="has-header" scroll="false" data-tap-disabled="true">
+    <div class="card" ng-if="error">
+      <div class="item item-text-wrap" translate>
+        We are sorry, there's no events to display. You can bookmark events on each event page
+      </div>
+    <button class="button button-block button-large button-positive" ng-if="error" ng-click="reload()">
+      <i class="icon ion-refresh"></i>
+      <span tranlate>Reload</span>
+    </button>
+    </div>
     <div id="map"></div>
     <ion-list>
       <ion-item ng-repeat="event in events" href="#/app/events/{{event.id}}" id="event-{{event.id}}" class="item-icon-right">

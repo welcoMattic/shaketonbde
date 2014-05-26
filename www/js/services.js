@@ -32,7 +32,6 @@ Shaketonbde.factory('Camera', ['$q', function($q) {
   };
 }]);
 
-
 Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', function($rootScope, $ionicPlatform, $q) {
   // Get Cordova's global Connection object or emulate a smilar one
   var Connection = window.Connection || {
@@ -50,7 +49,7 @@ Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', fun
     var q = $q.defer();
     $ionicPlatform.ready(function () {
       if(navigator.connection) {
-        promiseCompleted = true;
+        q.resolve(navigator.connection);
       } else {
         q.reject('navigator.connection is not defined');
       }

@@ -1,4 +1,7 @@
 <ion-view title="{{event.name}}">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-bookmark" ng-click="saveEvent(event.id)"></button>
+  </ion-nav-buttons>
   <ion-content class="has-header">
     <div class="card">
       <div class="item item-text-wrap">
