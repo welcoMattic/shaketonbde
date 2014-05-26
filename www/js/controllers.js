@@ -26,9 +26,12 @@ Shaketonbde.controller('AppCtrl', function($scope, $ionicActionSheet, gettextCat
 =            Events Controller           =
 ========================================*/
 
-Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $ionicPlatform, $q, $window, Event, gettext, gettextCatalog, CordovaNetwork) {
+Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $ionicPlatform, $q, $state, Event, gettext, gettextCatalog, CordovaNetwork) {
   $scope.reload = function() {
-    $window.location.reload();
+    console.log('reloading');
+    $ionicLoading.show({ template: '<i class="icon ion-loading-c page-loader"></i>', delay: 500 ,duration: 1000 });
+    $state.reload();
+    $ionicLoading.hide();
   };
   // wait ready event to fire
   $ionicPlatform.ready(function() {
@@ -36,6 +39,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $ionicPlatf
     if(ionic.Platform.isWebView()) {
       // Promise that return boolean isConnected
       CordovaNetwork.isOnline().then(function(isConnected) {
+        $scope.isConnected = isConnected;
 
         if(isConnected) {
         // if device is connected
@@ -138,15 +142,12 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $ionicPlatf
           var events = [];
           for(var i = 0 ; i < LSlength ; i++) {
             var event = JSON.parse(window.localStorage.getItem(i));
-            var letterId = String.fromCharCode(97 + parseInt($scope.event.id)).toUpperCase();
+            var letterId = String.fromCharCode(97 + parseInt(event.id)).toUpperCase();
             event.letterId = letterId;
             events.push(event);
           }
           if(events.length > 0)
             $scope.events = events;
-          else
-            $scope.error = true;
-
         }
       }).catch(function(err) {
         // In case of promise rejection
@@ -164,23 +165,27 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $ionicPlatf
 =            Single Event Controller            =
 ===============================================*/
 
-Shaketonbde.controller('EventCtrl', function($scope, $stateParams, $ionicPlatform, Event, CordovaNetwork) {
+Shaketonbde.controller('EventCtrl', function($scope, $stateParams, $ionicPlatform, Event, CordovaNetwork, gettext, gettextCatalog) {
   $ionicPlatform.ready(function() {
     // only if on webview (not desktop browsers)
     if(ionic.Platform.isWebView()) {
       // if device is connected
       CordovaNetwork.isOnline().then(function(isConnected) {
-        Event.query().$promise.then(function(events) {
-          var event = events[0][$stateParams.eventId];
-          console.log(event.date);
-          event.date = new Date(event.date);
-          $scope.event = event;
-          $scope.saveEvent = function(idSavedEvent) {
-            window.localStorage[idSavedEvent] = JSON.stringify($scope.event);
-          }
-        });
+        if(isConnected) {
+          Event.query().$promise.then(function(events) {
+            var event = events[0][$stateParams.eventId];
+            event.date = new Date(event.date);
+            $scope.event = event;
+            $scope.saveEvent = function(idSavedEvent) {
+              window.localStorage.setItem(idSavedEvent, JSON.stringify($scope.event));
+              navigator.notification.alert(gettextCatalog.getString(gettext('Event is bookmarked')), function(){}, 'Shake Ton BDE', 'Ok');
+            }
+          });
+        } else {
+          $scope.event = JSON.parse(window.localStorage.getItem($stateParams.eventId));
+        }
       }).catch(function(err) {
-        $scope.event = JSON.parse(window.localStorage.getItem($stateParams.eventId));
+        console.log('Connection promise error : ',err);
       });
     }
   });
@@ -192,7 +197,7 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, $ionicPlatfor
 =            Camera Controller            =
 =========================================*/
 
-Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
+Shaketonbde.controller('CameraCtrl', function($scope, $state, Camera) {
   $scope.takePhoto = function() {
     Camera.getPicture().then(function(imageURI) {
       setTimeout(function() {
@@ -209,10 +214,10 @@ Shaketonbde.controller('CameraCtrl', function($scope, Camera) {
           window.plugins.socialsharing.share(
             null, null, imageURI, null,
             function() {
-              window.location.replace('#/app/camera');
+              $state.go('app.camera');
             },
             function(errormsg) {
-              window.location.replace('#/app/camera');
+              $state.go('app.camera');
             }
           );
         };
