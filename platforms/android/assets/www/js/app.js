@@ -1,18 +1,23 @@
 'use strict';
-var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext', 'angulartics', 'angulartics.google.analytics.cordova']);
+var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext']);
 
-Shaketonbde.run(function($ionicPlatform, gettextCatalog) {
+Shaketonbde.run(function($ionicPlatform, gettextCatalog, gettext, $state, $stateParams) {
+  // Init statusbar
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
       StatusBar.styleLightContent();
     }
+    // Acceleration 1/2
+    watchID = navigator.accelerometer.watchAcceleration(onSuccessAcceleration, onErrorAcceleration, optionFrequency);
   });
+
+  // Init language & connection type
   var lang;
+  var connected = false;
   setTimeout(function(){
     navigator.globalization.getPreferredLanguage(
       function(language) {
         lang = language.value;
-        console.log('LANG : ',lang);
         gettextCatalog.currentLanguage = lang;
       },
       function() {
@@ -20,28 +25,32 @@ Shaketonbde.run(function($ionicPlatform, gettextCatalog) {
       }
     );
   }, 3000);
+  // Exception for desktop browsers
   if(!ionic.Platform.isWebView()) gettextCatalog.currentLanguage = 'fr';
+
+  // Acceleration 2/2 -- variables and functions
+  var watchID = null;
+  var optionFrequency = { frequency : 1000 };
+  function onSuccessAcceleration(acceleration) {
+    if(acceleration.y > 18) {
+      $state.transitionTo($state.current, $stateParams, {
+        reload: true,
+        inherit: false,
+        notify: true
+      });
+    }
+  }
+
+  function onErrorAcceleration() {
+    console.log('Error Acceleration !');
+  }
 });
 
 Shaketonbde.config(function($compileProvider){
   $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
-});
+})
 
-/*======================================
-=      Localstorage Service            =
-======================================*/
 
-Shaketonbde.run(function($localstorage) {
-  $localstorage.set('name', 'Max');
-  console.log($localstorage.get('name'));
-  $localstorage.setObject('post', {
-    name: 'Thoughts',
-    text: 'Today was a good day'
-  });
-
-  var post = $localstorage.getObject('post');
-  console.log(post);
-});
 /*==============================
 =            Router            =
 ==============================*/
@@ -98,3 +107,4 @@ Shaketonbde.config(function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/app/events');
 });
+

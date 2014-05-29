@@ -1,7 +1,7 @@
 'use strict';
 var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext']);
 
-Shaketonbde.run(function($ionicPlatform, gettextCatalog, gettext) {
+Shaketonbde.run(function($ionicPlatform, gettextCatalog, gettext, $state, $stateParams) {
   // Init statusbar
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
