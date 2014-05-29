@@ -9,7 +9,7 @@
   <ion-content class="has-header" scroll="false" data-tap-disabled="true">
     <div id="map"></div>
     <ion-list>
-      <ion-item ng-repeat="event in events" href="#/app/events/{{event.id}}" id="event-{{event.id}}" class="item-icon-right">
+      <ion-item ng-repeat="event in events" href="#/app/events/{{event.id}}" id="event-{{event.id}}" class="item-icon-right" analytics-on="click" analytics-event="Consult event ">
         {{event.letterId}} - {{event.name}} <i class="icon ion-ios7-information-outline"></i>
       </ion-item>
     </ion-list>
