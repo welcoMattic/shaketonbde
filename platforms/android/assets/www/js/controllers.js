@@ -148,8 +148,9 @@ Shaketonbde.controller('EventCtrl', function($scope, $stateParams, Event, $local
     $scope.saveEvent = function() {
       window.localStorage.setItem($scope.event.id, JSON.stringify($scope.event));
       var eventSaved = window.localStorage.getItem($scope.event.id);
-      console.log(eventSaved);
-      console.log('1er event visualisé : '+window.localStorage.getItem(0)+' ; 2ème event visualisé : '+window.localStorage.getItem(1));
+      //console.log(eventSaved);
+      console.log('1er event visualisé : '+window.localStorage.getItem(0));
+      console.log('2ème event visualisé : '+window.localStorage.getItem(1));
     }
   });
 });

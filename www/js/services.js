@@ -16,7 +16,7 @@ Shaketonbde.factory('Event', ['$resource',
 
 Shaketonbde.factory('Camera', ['$q', function($q) {
   return {
-    getPicture: function(options) {
+    getPicture: function() {
       var q = $q.defer();
       navigator.camera.getPicture(function(result) {
         q.resolve(result);
@@ -29,26 +29,53 @@ Shaketonbde.factory('Camera', ['$q', function($q) {
       });
       return q.promise;
     }
-  }
+  };
 }]);
 
-/*======================================
-=      Localstorage Service            =
-======================================*/
 
-Shaketonbde.factory('$localstorage', ['$window', function($window) {
+Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', function($rootScope, $ionicPlatform, $q) {
+  // Get Cordova's global Connection object or emulate a smilar one
+  var Connection = window.Connection || {
+    'ETHERNET' : 'ethernet',
+    'WIFI'     : 'wifi',
+    'CELL_2G'  : 'cell_2g',
+    'CELL_3G'  : 'cell_3g',
+    'CELL_4G'  : 'cell_4g',
+    'CELL'     : 'cell',
+    'EDGE'     : 'edge',
+    'UNKNOWN'  : 'unknown'
+  };
+
+  var asyncGetConnection = function () {
+    var q = $q.defer();
+    $ionicPlatform.ready(function () {
+      if(navigator.connection) {
+        q.resolve(navigator.connection);
+      } else {
+        q.reject('navigator.connection is not defined');
+      }
+    });
+    return q.promise;
+  };
+
   return {
-    set: function(key, value) {
-      $window.localStorage[key] = value;
-    },
-    get: function(key, defaultValue) {
-      return $window.localStorage[key] || defaultValue;
-    },
-    setObject: function(key, value) {
-      $window.localStorage[key] = JSON.stringify(value);
-    },
-    getObject: function(key) {
-      return JSON.parse($window.localStorage[key] || '{}');
+    isOnline: function () {
+      return asyncGetConnection().then(function(networkConnection) {
+        var isConnected = false;
+
+        switch (networkConnection.type) {
+          case Connection.ETHERNET:
+          case Connection.WIFI:
+          case Connection.CELL_2G:
+          case Connection.CELL_3G:
+          case Connection.CELL_4G:
+          case Connection.CELL:
+            isConnected = true;
+            break;
+        }
+        return isConnected;
+      });
     }
-  }
+  };
 }]);
+
