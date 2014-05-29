@@ -39,6 +39,8 @@ Install plugins :
 
 `$ cordova plugin add org.apache.cordova.dialogs`
 
+`$ cordova plugin add org.apache.cordova.device-motion`
+
 ## How to build on CLI
 
 First time :
