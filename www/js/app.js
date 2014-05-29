@@ -1,7 +1,7 @@
 'use strict';
 var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext']);
 
-Shaketonbde.run(function($ionicPlatform, gettextCatalog, gettext) {
+Shaketonbde.run(function($ionicPlatform, $window, gettextCatalog, gettext) {
   // Init statusbar
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
@@ -9,20 +9,33 @@ Shaketonbde.run(function($ionicPlatform, gettextCatalog, gettext) {
     }
   });
 
+  // Connection listener
+  document.addEventListener("offline", function() {
+    navigator.notification.vibrate();
+    navigator.notification.alert(gettextCatalog.getString(gettext('No internet connection')), function(){}, 'Shake Ton BDE', 'Ok');
+  }, false);
+
+  document.addEventListener("online", function() {
+    navigator.notification.vibrate();
+    navigator.notification.alert(gettextCatalog.getString(gettext('Internet connection is alive')), function(){}, 'Shake Ton BDE', 'Ok');
+  }, false);
+
   // Init language & connection type
   var lang;
   var connected = false;
-  setTimeout(function(){
-    navigator.globalization.getPreferredLanguage(
-      function(language) {
-        lang = language.value;
-        gettextCatalog.currentLanguage = lang;
-      },
-      function() {
-        gettextCatalog.currentLanguage = 'fr';
-      }
-    );
-  }, 3000);
+  if(ionic.Platform.isWebView()) {
+    setTimeout(function(){
+      navigator.globalization.getPreferredLanguage(
+        function(language) {
+          lang = language.value;
+          gettextCatalog.currentLanguage = lang;
+        },
+        function() {
+          gettextCatalog.currentLanguage = 'fr';
+        }
+      );
+    }, 3000);
+  }
   // Exception for desktop browsers
   if(!ionic.Platform.isWebView()) gettextCatalog.currentLanguage = 'fr';
 });

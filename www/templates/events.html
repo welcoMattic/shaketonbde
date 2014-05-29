@@ -13,7 +13,7 @@
         We are sorry, there's no events to display. You can bookmark events on each event page
       </div>
     </div>
-    <div id="map" ng-if="isConnected"></div>
+    <div id="map" ng-show="isConnected"></div>
     <ion-list>
       <ion-item ng-repeat="event in events" href="#/app/events/{{event.id}}" id="event-{{event.id}}" class="item-icon-right">
         {{event.letterId}} - {{event.name}} <i class="icon ion-ios7-information-outline"></i>

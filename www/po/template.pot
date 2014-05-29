@@ -3,24 +3,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: /workspace/shaketonbde/www/templates/invite.html
+msgid ""
+msgstr ""
+
 #: /workspace/shaketonbde/www/js/controllers.js
 msgid "Cancel"
-msgstr ""
-
-#: /workspace/shaketonbde/www/js/app.js
-msgid "Cell 2G connection"
-msgstr ""
-
-#: /workspace/shaketonbde/www/js/app.js
-msgid "Cell 3G connection"
-msgstr ""
-
-#: /workspace/shaketonbde/www/js/app.js
-msgid "Cell 4G connection"
-msgstr ""
-
-#: /workspace/shaketonbde/www/js/app.js
-msgid "Cell generic connection"
 msgstr ""
 
 #: /workspace/shaketonbde/www/js/controllers.js
@@ -31,12 +19,12 @@ msgstr ""
 msgid "Checkroom"
 msgstr ""
 
-#: /workspace/shaketonbde/www/templates/event.html
-msgid "Drinks"
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Choose event"
 msgstr ""
 
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Email:"
+#: /workspace/shaketonbde/www/templates/event.html
+msgid "Drinks"
 msgstr ""
 
 #: /workspace/shaketonbde/www/js/controllers.js
@@ -47,12 +35,8 @@ msgstr ""
 msgid "Error during contacts fetching"
 msgstr ""
 
-#: /workspace/shaketonbde/www/js/app.js
-msgid "Ethernet connection"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Facebook:"
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Event is bookmarked"
 msgstr ""
 
 #: /workspace/shaketonbde/www/templates/menu.html
@@ -63,6 +47,10 @@ msgstr ""
 msgid "French"
 msgstr ""
 
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Internet connection is alive"
+msgstr ""
+
 #: /workspace/shaketonbde/www/templates/menu.html
 msgid "Invite your friends!"
 msgstr ""
@@ -71,16 +59,8 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Name:"
-msgstr ""
-
 #: /workspace/shaketonbde/www/js/app.js
-msgid "No network connection"
-msgstr ""
-
-#: /workspace/shaketonbde/www/templates/invite.html
-msgid "Phone:"
+msgid "No internet connection"
 msgstr ""
 
 #: /workspace/shaketonbde/www/templates/camera.html
@@ -92,14 +72,18 @@ msgstr ""
 msgid "Tickets"
 msgstr ""
 
-#: /workspace/shaketonbde/www/js/app.js
-msgid "Unknown connection"
+#: /workspace/shaketonbde/www/templates/events.html
+msgid "We are sorry, there's no events to display. You can bookmark events on each event page"
 msgstr ""
 
-#: /workspace/shaketonbde/www/js/app.js
-msgid "WiFi connection"
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Yo! I invite you to this event:"
 msgstr ""
 
 #: /workspace/shaketonbde/www/js/controllers.js
 msgid "You are invisible:"
+msgstr ""
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "the:"
 msgstr ""
