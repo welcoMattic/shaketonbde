@@ -90,7 +90,7 @@ msgstr "Connexion 4G"
 
 #: /workspace/shaketonbde/www/js/app.js
 msgid "Cell generic connection"
-msgstr "Connexion GPRS"
+msgstr "Connexion générique"
 
 #: /workspace/shaketonbde/www/js/app.js
 msgid "Ethernet connection"
@@ -107,4 +107,32 @@ msgstr "Connexion inconnue"
 #: /workspace/shaketonbde/www/js/app.js
 msgid "WiFi connection"
 msgstr "Connexion WiFi"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Choose event"
+msgstr "Choisir un évènement"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Event is bookmarked"
+msgstr "Évènement sauvegardé hors ligne"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "Internet connection is alive"
+msgstr "Vous êtes connecté"
+
+#: /workspace/shaketonbde/www/js/app.js
+msgid "No internet connection"
+msgstr "Vous n'êtes pas connecté"
+
+#: /workspace/shaketonbde/www/templates/events.html
+msgid "We are sorry, there's no events to display. You can bookmark events on each event page"
+msgstr "Désolé, vous n'avez aucun évènement sauvegardé à afficher"
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "Yo! I invite you to this event:"
+msgstr "Yo ! Je t'invite à cette soirée : "
+
+#: /workspace/shaketonbde/www/js/controllers.js
+msgid "the:"
+msgstr "le : "
 
