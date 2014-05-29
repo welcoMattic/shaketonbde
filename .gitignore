@@ -4,6 +4,9 @@ node_modules/
 plugins/
 platforms/
 
+ionic.cookies
+ionic.project
+
 # Android
 platforms/android/assets/www
 platforms/android/bin/
