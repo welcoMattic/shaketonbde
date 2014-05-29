@@ -32,7 +32,7 @@ Shaketonbde.factory('Camera', ['$q', function($q) {
   };
 }]);
 
-Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', function($rootScope, $ionicPlatform, $q) {
+Shaketonbde.service('CordovaNetwork', ['$ionicPlatform', '$q', function($ionicPlatform, $q) {
   // Get Cordova's global Connection object or emulate a smilar one
   var Connection = window.Connection || {
     "CELL"     : "cellular",

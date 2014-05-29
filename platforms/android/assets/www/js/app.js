@@ -1,33 +1,22 @@
 'use strict';
 var Shaketonbde = angular.module('Shaketonbde', ['ionic', 'ngResource', 'gettext']);
 
-Shaketonbde.run(function($ionicPlatform, $window, $state, gettextCatalog, gettext) {
+Shaketonbde.run(function($ionicPlatform, $ionicLoading, $window, $state, gettextCatalog, gettext) {
   // Init statusbar
   $ionicPlatform.ready(function() {
     if(window.StatusBar) {
       StatusBar.styleLightContent();
     }
 
-    function onSuccessAcceleration(acceleration) {
-      var delta = 18
-      if(ionic.Platform.isIOS())
-        delta = 8
-
-      console.log(delta, acceleration.y);
-      if(acceleration.y > delta) {
-        $state.transitionTo($state.current, $stateParams, {
-          reload: true,
-          inherit: false,
-          notify: true
-        });
+    function onCallbackAcceleration(acceleration) {
+      if(acceleration.y > 8) {
+        $ionicLoading.show({ template: '<i class="icon ion-loading-c page-loader"></i>', duration: 1000, delay: 500 });
+        // $ionicLoading.hide();
+        $state.reload();
       }
     }
 
-    function onErrorAcceleration() {
-      console.log('Error Acceleration !');
-    }
-
-    navigator.accelerometer.watchAcceleration(onSuccessAcceleration, onErrorAcceleration, { frequency : 1000 });
+    navigator.accelerometer.watchAcceleration(onCallbackAcceleration, onCallbackAcceleration, {frequency : 500});
   });
 
   var connectionState = null;

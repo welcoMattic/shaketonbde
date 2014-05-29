@@ -113,6 +113,7 @@ Shaketonbde.controller('EventsCtrl', function($scope, $ionicLoading, $ionicPlatf
 
   function onGeolocFail(error) {
     navigator.notification.alert(gettextCatalog.getString(gettext('You are invisible: ')) + error.message, function(){}, 'Shake Ton BDE', 'Ok');
+    $ionicLoading.hide();
   }
 
   $scope.centreOnMe = function() {
