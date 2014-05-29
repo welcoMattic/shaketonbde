@@ -296,9 +296,9 @@ Shaketonbde.controller('InviteCtrl', function($scope, $ionicLoading, $ionicActio
         titleText: gettextCatalog.getString(gettext('Choose event')),
         cancelText: gettextCatalog.getString(gettext('Cancel')),
         buttonClicked: function(index) {
-          message = gettextCatalog.getString(gettext("Yo! I invite you to this event: "))
-                    + $scope.events[index].name + ', '
-                    + gettextCatalog.getString(gettext("the: "))
+          message = gettextCatalog.getString(gettext("Yo! I invite you to this event:"))
+                    + ' ' + $scope.events[index].name + ', '
+                    + ' ' + gettextCatalog.getString(gettext("the:"))
                     + $scope.events[index].date;
           var selectedNumbers = $scope.contacts.filter(function(value) {
             return value.checked;
