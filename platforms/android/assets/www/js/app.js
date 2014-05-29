@@ -12,6 +12,8 @@ Shaketonbde.run(function($ionicPlatform, $window, $state, gettextCatalog, gettex
       var delta = 18
       if(ionic.Platform.isIOS())
         delta = 8
+
+      console.log(delta, acceleration.y);
       if(acceleration.y > delta) {
         $state.transitionTo($state.current, $stateParams, {
           reload: true,

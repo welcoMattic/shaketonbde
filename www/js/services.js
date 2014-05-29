@@ -35,14 +35,14 @@ Shaketonbde.factory('Camera', ['$q', function($q) {
 Shaketonbde.service('CordovaNetwork', ['$rootScope', '$ionicPlatform', '$q', function($rootScope, $ionicPlatform, $q) {
   // Get Cordova's global Connection object or emulate a smilar one
   var Connection = window.Connection || {
-    'ETHERNET' : 'ethernet',
-    'WIFI'     : 'wifi',
-    'CELL_2G'  : 'cell_2g',
-    'CELL_3G'  : 'cell_3g',
-    'CELL_4G'  : 'cell_4g',
-    'CELL'     : 'cell',
-    'EDGE'     : 'edge',
-    'UNKNOWN'  : 'unknown'
+    "CELL"     : "cellular",
+    "CELL_2G"  : "2g",
+    "CELL_3G"  : "3g",
+    "CELL_4G"  : "4g",
+    "ETHERNET" : "ethernet",
+    "NONE"     : "none",
+    "UNKNOWN"  : "unknown",
+    "WIFI"     : "wifi"
   };
 
   var asyncGetConnection = function () {
